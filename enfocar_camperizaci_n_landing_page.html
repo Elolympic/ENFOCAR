@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enfocar Camperización | Tu hogar sobre ruedas a medida</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F59E0B',
+              gold: '#EAB308',
+              amber: '#D97706',
+              light: '#FEF3C7',
+              dark: '#0B0F17',
+              surface: '#131A26',
+              card: '#1B2433',
+              border: '#28354A'
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom glow and glassmorphism touches */
+    .glow-amber {
+      box-shadow: 0 0 45px -10px rgba(245, 158, 11, 0.35);
+    }
+    .glow-amber-sm {
+      box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.25);
+    }
+    .badge-ring {
+      background: radial-gradient(circle at center, rgba(245,158,11,0.15) 0%, rgba(11,15,23,0) 70%);
+    }
+    /* Hide scrollbar for tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0A0D14] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#0A0D14]/90 backdrop-blur-md border-b border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo (Solo Isologo) -->
+        <a href="#hero" class="flex items-center group py-1.5" title="Enfocar Camperización">
+          <!-- Official Circular Logo Emblem -->
+          <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_18px_rgba(245,158,11,0.35)]">
+            <img 
+              src="IMG_1780.PNG_2.png" 
+              alt="Enfocar Camperización Logo" 
+              class="w-full h-full object-contain rounded-full"
+              onerror="this.onerror=null; this.src='IMG_1780.PNG.png'; this.onerror=() => { this.src='IMG_1780.PNG'; this.onerror=() => { this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); } }"
+            />
+            <!-- High-fidelity Vector Render of the Exact Emblem -->
+            <svg class="w-full h-full hidden" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer concentric rings -->
+              <circle cx="250" cy="250" r="244" fill="#0A0D14" stroke="#ffffff" stroke-width="7"/>
+              <circle cx="250" cy="250" r="230" fill="#0A0D14" stroke="#000000" stroke-width="14"/>
+              <circle cx="250" cy="250" r="218" fill="#0A0D14" stroke="#ffffff" stroke-width="5"/>
+              <circle cx="250" cy="250" r="206" fill="#0B0F17" stroke="#000000" stroke-width="8"/>
+
+              <!-- Golden Sunrise Backdrop -->
+              <path d="M 52 250 A 198 198 0 0 1 448 250 Z" fill="#F59E0B"/>
+              <path d="M 60 250 A 190 190 0 0 1 440 250 Z" fill="url(#sun-gradient)"/>
+              
+              <!-- Pine trees forest silhouette on the right -->
+              <g fill="#0B0F17">
+                <polygon points="310,250 326,200 318,200 334,165 328,165 342,130 356,165 350,165 366,200 358,200 374,250"/>
+                <polygon points="345,250 360,205 353,205 368,172 362,172 376,140 390,172 384,172 399,205 392,205 407,250"/>
+                <polygon points="380,250 392,215 387,215 400,185 395,185 407,158 419,185 414,185 427,215 422,215 435,250"/>
+              </g>
+
+              <!-- Detailed Class A / Motorhome Camper (Facing 3/4) -->
+              <g id="camper-motorhome">
+                <!-- Vehicle Body Outline & Fill -->
+                <path d="M 115 160 C 115 135 155 120 245 120 L 305 125 C 322 127 330 138 333 155 L 342 225 C 343 235 340 248 332 250 L 118 250 C 114 250 112 245 112 238 L 115 160 Z" fill="#FFFFFF" stroke="#0B0F17" stroke-width="7" stroke-linejoin="round"/>
+                
+                <!-- Roof profile & Awning box -->
+                <path d="M 125 145 C 160 135 240 135 295 140" stroke="#0B0F17" stroke-width="5" stroke-linecap="round"/>
+                <rect x="128" y="152" width="85" height="6" rx="2" fill="#0B0F17"/>
+                
+                <!-- Side panels and body lines -->
+                <rect x="128" y="166" width="30" height="42" rx="2" fill="#FFFFFF" stroke="#0B0F17" stroke-width="4"/>
+                <rect x="165" y="166" width="26" height="20" rx="2" fill="#1E293B" stroke="#0B0F17" stroke-width="3.5"/>
+                <rect x="197" y="166" width="26" height="20" rx="2" fill="#1E293B" stroke="#0B0F17" stroke-width="3.5"/>
+                
+                <!-- Lower body skirt trim -->
+                <path d="M 114 220 L 338 220 L 336 242 L 115 242 Z" fill="#E2E8F0" stroke="#0B0F17" stroke-width="4"/>
+                
+                <!-- Front Cab & Windshield Section -->
+                <path d="M 235 142 L 310 148 C 322 150 326 156 328 170 L 332 215 L 235 215 Z" fill="#FFFFFF" stroke="#0B0F17" stroke-width="5"/>
+                <path d="M 252 148 L 306 152 C 314 154 316 158 317 172 L 320 208 L 252 208 Z" fill="#0F172A" stroke="#0B0F17" stroke-width="4"/>
+                <!-- Windshield glass glare reflection -->
+                <polygon points="268,152 284,153 260,208 248,208" fill="#FFFFFF" opacity="0.85"/>
+                
+                <!-- Side driver window & mirror -->
+                <path d="M 235 152 L 246 152 L 246 205 L 235 205 Z" fill="#0F172A"/>
+                <rect x="318" y="172" width="7" height="18" rx="3" fill="#0B0F17"/>
+                
+                <!-- Front Grille & Aerodynamic Headlights -->
+                <path d="M 265 216 L 333 216 L 330 240 L 265 240 Z" fill="#F8FAFC" stroke="#0B0F17" stroke-width="4"/>
+                <!-- Curved modern grille -->
+                <path d="M 280 226 C 298 238 315 238 326 226" stroke="#0B0F17" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <!-- Angular headlights -->
+                <polygon points="268,218 282,223 275,232 268,228" fill="#F59E0B" stroke="#0B0F17" stroke-width="2.5"/>
+                <polygon points="328,218 316,223 321,232 328,228" fill="#F59E0B" stroke="#0B0F17" stroke-width="2.5"/>
+
+                <!-- Wheels and tires in perspective -->
+                <ellipse cx="138" cy="242" rx="10" ry="14" fill="#0B0F17"/>
+                <ellipse cx="138" cy="242" rx="4" ry="7" fill="#FFFFFF"/>
+                <ellipse cx="150" cy="242" rx="9" ry="14" fill="#0B0F17"/>
+                <ellipse cx="150" cy="242" rx="4" ry="7" fill="#FFFFFF"/>
+                <ellipse cx="232" cy="242" rx="10" ry="15" fill="#0B0F17"/>
+                <ellipse cx="232" cy="242" rx="4.5" ry="8" fill="#FFFFFF"/>
+              </g>
+
+              <!-- Central Arched Banner -->
+              <g id="banner">
+                <!-- Drop shadow behind ribbon -->
+                <path d="M 45 285 Q 250 250 455 285 L 445 345 Q 250 310 55 345 Z" fill="#000000" opacity="0.6"/>
+                <!-- Ribbon main body -->
+                <path d="M 48 275 Q 250 240 452 275 L 442 338 Q 250 305 58 338 Z" fill="#0B0F17" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+                
+                <!-- "ENFOCAR" Arched Brand Typography -->
+                <text x="250" y="306" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" stroke="#0B0F17" stroke-width="3" letter-spacing="3">ENFOCAR</text>
+                
+                <!-- Subtitle "— CAMPERIZACIÓN —" -->
+                <text x="250" y="328" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15" fill="#FFFFFF" letter-spacing="4">— CAMPERIZACIÓN —</text>
+              </g>
+
+              <!-- Lower Section: Golden Arc & 3 Five-Point Stars -->
+              <path d="M 120 375 A 170 170 0 0 0 380 375" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <g fill="#F59E0B" stroke="#0B0F17" stroke-width="1.5">
+                <!-- Left Star -->
+                <polygon points="208,355 212,343 216,355 228,355 218,362 222,374 212,367 202,374 206,362 196,355"/>
+                <!-- Center Star (Slightly larger) -->
+                <polygon points="250,351 255,337 260,351 274,351 262,360 267,374 255,365 243,374 248,360 236,351"/>
+                <!-- Right Star -->
+                <polygon points="292,355 296,343 300,355 312,355 302,362 306,374 296,367 286,374 290,362 280,355"/>
+              </g>
+
+              <defs>
+                <linearGradient id="sun-gradient" x1="250" y1="50" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FBBF24"/>
+                  <stop offset="100%" stop-color="#D97706"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-slate-300">
+          <a href="#servicios" class="hover:text-amber-400 transition-colors">Servicios</a>
+          <a href="#configurador" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <span>Configurador</span>
+            <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px] font-bold px-1.5 py-0.5 rounded-full">Personalizado</span>
+          </a>
+          <a href="#galeria" class="hover:text-amber-400 transition-colors">Proyectos</a>
+          <a href="#proceso" class="hover:text-amber-400 transition-colors">Método</a>
+          <a href="#opiniones" class="hover:text-amber-400 transition-colors">Garantía</a>
+        </nav>
+
+        <!-- CTA Action Buttons -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="https://wa.me/5492246518924?text=Hola%20Enfocar%20Camperizaci%C3%B3n,%20quisiera%20pedir%20presupuesto%20para%20mi%20furgoneta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white px-3 py-2 rounded-lg hover:bg-slate-800/60 transition">
+            <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.06c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.12 8.12 0 01-1.25-4.28c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.6 2.4 5.78 0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.99.69.45-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+            <span>WhatsApp Directo</span>
+          </a>
+          <a href="#contacto" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-amber-500/25 transition-all transform active:scale-95">
+            <span>Contáctanos</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden p-2.5 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white border border-slate-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-border bg-[#0B0F17] px-6 py-5 space-y-4">
+      <a href="#servicios" class="block text-slate-200 font-medium hover:text-amber-400 mobile-link">Servicios de Camperización</a>
+      <a href="#configurador" class="block text-amber-400 font-bold mobile-link">Calcular Presupuesto Online</a>
+      <a href="#galeria" class="block text-slate-200 font-medium hover:text-amber-400 mobile-link">Galería de Trabajos</a>
+      <a href="#proceso" class="block text-slate-200 font-medium hover:text-amber-400 mobile-link">Proceso de Trabajo</a>
+      <a href="#contacto" class="block text-slate-200 font-medium hover:text-amber-400 mobile-link">Contacto & Taller</a>
+      <div class="pt-2">
+        <a href="#contacto" class="w-full text-center block bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 rounded-xl mobile-link shadow-lg shadow-amber-500/20">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative pt-32 sm:pt-40 pb-20 sm:pb-32 overflow-hidden">
+    <!-- Atmospheric background lighting -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-gradient-to-b from-amber-500/20 via-amber-600/10 to-transparent blur-[140px] -z-10 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#1f293d_1px,transparent_1px)] [background-size:24px_24px] opacity-25 -z-10"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold tracking-wide mb-6">
+        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span>Taller Especializado en Camperización a Medida</span>
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black font-heading tracking-tight leading-[1.1] text-white">
+        Transformamos tu vehículo en <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 drop-shadow-sm">
+          tu libertad sobre ruedas.
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mt-6 leading-relaxed">
+        En <strong class="text-white">Enfocar Camperización</strong> diseñamos y fabricamos camperizaciones integrales y a medida para furgonetas medianas, gran volumen y autocaravanas. Máxima durabilidad, aislamiento térmico extremo y energía solar autónoma para viajar con total confort y seguridad.
+      </p>
+
+      <!-- Key Highlights Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-6 max-w-2xl mx-auto">
+        <div class="flex items-center gap-2 bg-brand-surface/80 border border-brand-border px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200">
+          <span class="text-amber-400 font-bold">✓</span> Trabajo 100% artesanal
+        </div>
+        <div class="flex items-center gap-2 bg-brand-surface/80 border border-brand-border px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200">
+          <span class="text-amber-400 font-bold">✓</span> Confianza y seguridad
+        </div>
+        <div class="flex items-center gap-2 bg-brand-surface/80 border border-brand-border px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-200">
+          <span class="text-amber-400 font-bold">✓</span> Calidad asegurada
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+        <a href="#configurador" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold text-base px-8 py-4 rounded-xl shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 active:scale-95">
+          <span>Configurar Presupuesto Online</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#galeria" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-surface hover:bg-slate-800 border border-brand-border hover:border-amber-400/50 text-slate-200 hover:text-white font-semibold text-base px-8 py-4 rounded-xl transition">
+          <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <span>Ver Galería de Trabajos</span>
+        </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="pt-10 flex flex-wrap items-center justify-center gap-6 text-slate-400 text-xs sm:text-sm">
+        <div class="flex items-center gap-2">
+          <div class="flex text-amber-400">★★★★★</div>
+          <span class="font-semibold text-slate-200">4.9/5 en valoraciones</span>
+        </div>
+        <div class="h-4 w-px bg-slate-700 hidden sm:block"></div>
+        <div><span class="font-bold text-white">+20</span> furgonetas camperizadas</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="servicios" class="py-24 bg-brand-dark relative border-t border-brand-border/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-amber-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20">
+          Servicios de Camperización Integral
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight text-white">
+          Todo lo necesario para viajar con confort de hotel
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Cuidamos cada detalle constructivo. No usamos muebles estándar premontados; cada proyecto se ajusta milimétricamente al chasis de tu furgoneta.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Electricidad Solar & 12V -->
+        <div class="group bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-amber-500/50 p-8 rounded-3xl transition duration-300 relative flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-amber-300 transition">Energía Solar & Sistemas 12V / 220V</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Instalación de baterías de litio de última generación, placas solares monocristalinas, reguladores de carga inteligentes e inversores de onda pura para conectar tus equipos a 220V sin depender de campings.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400 pt-2 font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Baterías de Litio con monitor Bluetooth</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Paneles solares slim o rígidos de alta eficiencia</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Booster de carga inteligente durante la marcha</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs text-amber-400 font-semibold group-hover:underline flex items-center gap-1">Consultar configuraciones solares →</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Aislamiento & Climatización -->
+        <div class="group bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-amber-500/50 p-8 rounded-3xl transition duration-300 relative flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-amber-300 transition">Aislamiento Termoacústico & Climatización</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Aislamiento termoacústico con elastómero aislante de alta densidad en chapa y nervios para evitar puentes térmicos y condensaciones. Instalación de calefacciones estacionarias con kit de altura.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400 pt-2 font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Aislamiento térmico multicapa en vigas estructurales</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Calefacción estacionaria a combustible independiente</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Claraboyas con ventilador extractor termostático</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs text-amber-400 font-semibold group-hover:underline flex items-center gap-1">Ver opciones de confort térmico →</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Carpintería a Medida -->
+        <div class="group bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-amber-500/50 p-8 rounded-3xl transition duration-300 relative flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-amber-300 transition">Carpintería Ligera & Acabados CPL</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Mobiliario fabricado exclusivamente en contrachapado fenólico ultraligero de chopo/abedul aplacado en HPL/CPL resistente a rayaduras, humedad y vibraciones del viaje continuo.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400 pt-2 font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Herrajes con cierres de seguridad antiapertura</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Encimeras de madera maciza tratada o resina</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Cama fija transversal o basculante eléctrica</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs text-amber-400 font-semibold group-hover:underline flex items-center gap-1">Diseños de distribución →</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Plomería & Baño -->
+        <div class="group bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-amber-500/50 p-8 rounded-3xl transition duration-300 relative flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-amber-300 transition">Plomería & Cabina de Ducha</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Depósitos de aguas limpias y grises con electroválvula de vaciado automático desde el cuadro. Cabinas de ducha impermeabilizadas, boiler de agua caliente y WC químico o seco.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400 pt-2 font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Depósitos a medida en bajos para optimizar espacio</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Bombas de agua presurizadas con vaso de expansión</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Toma de ducha exterior con agua caliente</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs text-amber-400 font-semibold group-hover:underline flex items-center gap-1">Opciones de baño interior →</span>
+          </div>
+        </div>
+
+        <!-- Card 5: Camperizaciones Parciales -->
+        <div class="group bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-amber-500/50 p-8 rounded-3xl transition duration-300 relative flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-black transition duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white group-hover:text-amber-300 transition">Mejoras & Upgrades Parciales</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              ¿Ya tienes furgo pero necesitas añadir placas solares, instalar una calefacción, cambiar tu batería a litio o añadir bases giratorias? Hacemos instalaciones puntuales y equipamientos a medida.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-400 pt-2 font-medium">
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Instalación de bases giratorias certificadas</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Colocación de ventanas abatibles integradas con mosquitera</li>
+              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Módulos camper extraíbles para maletero</li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <span class="text-xs text-amber-400 font-semibold group-hover:underline flex items-center gap-1">Ver catálogo de accesorios →</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="configurador" class="py-24 bg-[#0A0D14] relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="inline-block px-3.5 py-1 text-xs font-bold rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/30 uppercase tracking-widest">
+          Herramienta Interactiva
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+          Configura tu Camper a Medida
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Elige el tamaño de tu furgoneta y los equipamientos que necesitas para solicitar tu propuesta personalizada directamente por WhatsApp.
+        </p>
+      </div>
+
+      <!-- Main Configurator Card -->
+      <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-10 shadow-2xl glow-amber-sm">
+        
+        <!-- Step 1: Vehicle Category Selector -->
+        <div class="space-y-4 mb-10">
+          <label class="block text-sm font-bold uppercase tracking-wider text-amber-400">
+            Paso 1: Selecciona el formato de tu vehículo
+          </label>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" id="vehicleOptions">
+            
+            <!-- Option 1 -->
+            <div onclick="selectVehicle('compacta')" data-vehicle="compacta" class="vehicle-card cursor-pointer bg-brand-card hover:border-amber-400 border-2 border-brand-border rounded-2xl p-5 transition duration-200 flex flex-col justify-between text-left">
+              <div>
+                <div class="text-2xl mb-2">🚐</div>
+                <h4 class="font-heading font-bold text-white text-base">Mini Camper / Compacta</h4>
+                <p class="text-xs text-slate-400 mt-1">Berlingo, Caddy, Kangoo, Rifter, Tourneo.</p>
+              </div>
+            </div>
+
+            <!-- Option 2 (Default active) -->
+            <div onclick="selectVehicle('mediana')" data-vehicle="mediana" class="vehicle-card active cursor-pointer bg-brand-card border-2 border-amber-400 rounded-2xl p-5 transition duration-200 flex flex-col justify-between text-left relative shadow-lg shadow-amber-500/10">
+              <span class="absolute top-2.5 right-2.5 text-[10px] font-extrabold uppercase bg-amber-500 text-black px-2 py-0.5 rounded-md">Popular</span>
+              <div>
+                <div class="text-2xl mb-2">🚌</div>
+                <h4 class="font-heading font-bold text-white text-base">Furgón Mediano</h4>
+                <p class="text-xs text-slate-400 mt-1">VW T5/T6, Vito, Trafic, Custom, Spacetourer.</p>
+              </div>
+            </div>
+
+            <!-- Option 3 -->
+            <div onclick="selectVehicle('gran_volumen')" data-vehicle="gran_volumen" class="vehicle-card cursor-pointer bg-brand-card hover:border-amber-400 border-2 border-brand-border rounded-2xl p-5 transition duration-200 flex flex-col justify-between text-left">
+              <div>
+                <div class="text-2xl mb-2">🏠</div>
+                <h4 class="font-heading font-bold text-white text-base">Gran Volumen L2/L3</h4>
+                <p class="text-xs text-slate-400 mt-1">Ducato, Boxer, Jumper, Sprinter, Crafter, Master.</p>
+              </div>
+            </div>
+
+            <!-- Option 4 -->
+            <div onclick="selectVehicle('autobus')" data-vehicle="autobus" class="vehicle-card cursor-pointer bg-brand-card hover:border-amber-400 border-2 border-brand-border rounded-2xl p-5 transition duration-200 flex flex-col justify-between text-left">
+              <div>
+                <div class="text-2xl mb-2">🚛</div>
+                <h4 class="font-heading font-bold text-white text-base">Camión / Microbús</h4>
+                <p class="text-xs text-slate-400 mt-1">Vehículos especiales, Iveco Daily XXL, chasis cabina.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Step 2: Modular Equipments Checkboxes (No Brands, Purposes Only) -->
+        <div class="space-y-4 mb-10">
+          <label class="block text-sm font-bold uppercase tracking-wider text-amber-400">
+            Paso 2: Agrega los módulos y equipamientos que deseas
+          </label>
+          
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="extrasContainer">
+            
+            <!-- Extra 1 -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" checked data-name="Aislamiento Térmico y Acústico Integral" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Aislamiento Térmico y Acústico Integral</div>
+                <div class="text-xs text-slate-400">Aislamiento en paredes, techo, puertas y suelo</div>
+              </div>
+            </label>
+
+            <!-- Extra 2 -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" checked data-name="Sistema Eléctrico Solar Autónomo con Batería de Litio" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Sistema Eléctrico Solar con Batería de Litio</div>
+                <div class="text-xs text-slate-400">Panel solar, batería auxiliar e inversor de corriente</div>
+              </div>
+            </label>
+
+            <!-- Extra 3 -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" checked data-name="Calefacción Estacionaria para Bajas Temperaturas" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Calefacción Estacionaria</div>
+                <div class="text-xs text-slate-400">Climatización y confort continuo en invierno</div>
+              </div>
+            </label>
+
+            <!-- Extra 4 -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" data-name="Cabina de Ducha Interior con Agua Caliente" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Cabina de Ducha Interior con Agua Caliente</div>
+                <div class="text-xs text-slate-400">Espacio de baño cerrado con calentador integrado</div>
+              </div>
+            </label>
+
+            <!-- Extra 5 -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" checked data-name="Claraboya con Sistema de Ventilación y Extracción" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Claraboya con Ventilación Forzada</div>
+                <div class="text-xs text-slate-400">Extracción de olores y renovación continua de aire</div>
+              </div>
+            </label>
+
+            <!-- Extra 6 (Replaced Homologación with Aire Acondicionado) -->
+            <label class="flex items-start gap-3 p-4 bg-brand-card rounded-xl border border-brand-border hover:border-slate-600 cursor-pointer transition select-none">
+              <input type="checkbox" onchange="calculateTotal()" checked data-name="Sistema de Aire Acondicionado de Habitáculo" class="addon-check w-5 h-5 rounded mt-0.5 accent-amber-500">
+              <div>
+                <div class="text-sm font-bold text-white">Aire Acondicionado</div>
+                <div class="text-xs text-slate-400">Climatización de habitáculo para altas temperaturas</div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Summary & Sole WhatsApp CTA (No prices, only Enviar a WhatsApp) -->
+        <div class="bg-gradient-to-br from-brand-card to-[#121722] border border-amber-500/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center md:text-left">
+            <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">Tu Configuración Lista</span>
+            <h3 id="selectionSummary" class="text-xl sm:text-2xl font-black font-heading text-white">
+              Furgón Mediano con 5 módulos seleccionados
+            </h3>
+            <p class="text-xs text-slate-400 font-medium">
+              Envíanos los módulos elegidos para brindarte asesoramiento directo y personalizado.
+            </p>
+          </div>
+
+          <!-- Sole WhatsApp CTA Button -->
+          <div class="w-full md:w-auto">
+            <button onclick="sendQuoteToWhatsApp()" class="w-full md:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base tracking-wide transition shadow-xl shadow-emerald-600/25 flex items-center justify-center gap-3">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.06c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.12 8.12 0 01-1.25-4.28c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.6 2.4 5.78 0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.99.69.45-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+              <span>Enviar a WhatsApp</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="py-24 bg-brand-surface border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+            Nuestros Trabajos
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white mt-2">
+            Proyectos Entregados
+          </h2>
+          <p class="text-slate-400 text-sm max-w-xl mt-1">
+            Cada furgoneta que sale de nuestras instalaciones es una obra única diseñada según las necesidades y estilo de vida de su dueño.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 md:pb-0">
+          <button onclick="filterGallery('all')" class="gallery-filter active px-4 py-2 rounded-xl text-xs font-bold border transition bg-amber-500 text-black border-amber-500" data-category="all">Todos</button>
+          <button onclick="filterGallery('gran_volumen')" class="gallery-filter px-4 py-2 rounded-xl text-xs font-bold border border-brand-border bg-brand-card text-slate-300 hover:text-white transition" data-category="gran_volumen">Gran Volumen</button>
+          <button onclick="filterGallery('mediana')" class="gallery-filter px-4 py-2 rounded-xl text-xs font-bold border border-brand-border bg-brand-card text-slate-300 hover:text-white transition" data-category="mediana">Medianas</button>
+          <button onclick="filterGallery('detalles')" class="gallery-filter px-4 py-2 rounded-xl text-xs font-bold border border-brand-border bg-brand-card text-slate-300 hover:text-white transition" data-category="detalles">Acabados & Baño</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="galleryGrid">
+        
+        <!-- Item 1 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="gran_volumen">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?auto=format&fit=crop&w=900&q=80" alt="Camper Gran Volumen Sprinter Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Proyecto+Sprinter+L3H2'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Sprinter L3H2 4x4
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Nomad Expedition Edition</h3>
+            <p class="text-xs text-slate-400">Ducha con agua caliente, 300Ah de litio, encimera de roble macizo y cama elevable motorizada.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ 4 Plazas viajar / 4 dormir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="mediana">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=80" alt="Volkswagen T6 Camper Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Volkswagen+T6.1+Enfocar'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Volkswagen T6.1 California Look
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Pacific Custom Vibe</h3>
+            <p class="text-xs text-slate-400">Mobiliario lateral CPL blanco ártico, base giratoria piloto y copiloto, nevera a compresor de 12V.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Techo elevable & placa solar 180W</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="gran_volumen">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=900&q=80" alt="Ducato Camper Interior Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Fiat+Ducato+Maxi+L2H2'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Fiat Ducato L2H2
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Nordic Timber Minimalist</h3>
+            <p class="text-xs text-slate-400">Diseño escandinavo en tonos abedul y grafito mate. Sistema de aguas grises con vaciado por botón.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Aislamiento acústico y térmico integral</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="detalles">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80" alt="Detalle cocina camper Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Cocina+y+Fregadero+Inox'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Cocina Premium
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Módulos de Cocina & Nevera</h3>
+            <p class="text-xs text-slate-400">Cajoneras con guías telescópicas soft-close y encimera ampliable con mesa abatible exterior.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Acabado en contrachapado de 15mm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="detalles">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Cabina de ducha Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Cabina+de+Ducha+Impermeable'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Zona Húmeda
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Cabina de Ducha Termosellada</h3>
+            <p class="text-xs text-slate-400">Revestimiento continuo sin juntas, claraboya extractora con luz led y mampara enrollable.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Opción de WC químico portátil o giratorio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="gran_volumen">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=900&q=80" alt="Ducato Camper Interior Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Fiat+Ducato+Maxi+L2H2'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Fiat Ducato L2H2
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Nordic Timber Minimalist</h3>
+            <p class="text-xs text-slate-400">Diseño escandinavo en tonos abedul y grafito mate. Sistema de aguas grises con vaciado por botón.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Aislamiento acústico integral Kaiflex</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="detalles">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80" alt="Detalle cocina camper Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Cocina+y+Fregadero+Inox'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Cocina Premium
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Módulos de Cocina & Nevera</h3>
+            <p class="text-xs text-slate-400">Cajoneras con guías telescópicas soft-close y encimera ampliable con mesa abatible exterior.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Acabado en contrachapado de 15mm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="detalles">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Cabina de ducha Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Cabina+de+Ducha+Impermeable'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Zona Húmeda
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Cabina de Ducha Termosellada</h3>
+            <p class="text-xs text-slate-400">Revestimiento continuo sin juntas, claraboya extractora con luz led y mampara enrollable Tambour.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ WC químico portátil o giratorio Thetford</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-card group bg-brand-card border border-brand-border rounded-2xl overflow-hidden shadow-lg transition duration-300 hover:-translate-y-1 hover:border-amber-500/60" data-type="mediana">
+          <div class="relative h-64 overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=900&q=80" alt="Renault Trafic Camper Enfocar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/131A26/F59E0B?text=Renault+Trafic+Camper'" />
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-[11px] font-bold text-amber-400 border border-amber-500/30">
+              Renault Trafic III
+            </div>
+          </div>
+          <div class="p-6 space-y-2">
+            <h3 class="text-lg font-bold font-heading text-white">Camperización Modular Weekend</h3>
+            <p class="text-xs text-slate-400">Mueble cama convertible en salón comedor 'U', ducha exterior trasera e iluminación cálida dimerizable.</p>
+            <div class="flex items-center gap-2 pt-3 text-[11px] font-semibold text-amber-400">
+              <span>★ Conserva 5 plazas de viaje</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="proceso" class="py-24 bg-[#0B0F17] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-amber-400 text-xs sm:text-sm font-bold uppercase tracking-widest bg-amber-500/10 px-3.5 py-1 rounded-full border border-amber-500/20">
+          El Camino a tu Camper
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          ¿Cómo trabajamos en Enfocar Camperización?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Un proceso transparente, con plazos definidos y sin sorpresas presupuestarias.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-brand-surface border border-brand-border p-6 rounded-2xl relative space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-black font-black flex items-center justify-center text-xl font-heading shadow-md shadow-amber-500/20">
+            01
+          </div>
+          <h3 class="text-lg font-bold font-heading text-white">Asesoría & Diseño 3D</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Nos reunimos (en taller u online) para escuchar tus hábitos de viaje, definir la distribución idónea y crear la infografía 3D de tu vehículo.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-brand-surface border border-brand-border p-6 rounded-2xl relative space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-black font-black flex items-center justify-center text-xl font-heading shadow-md shadow-amber-500/20">
+            02
+          </div>
+          <h3 class="text-lg font-bold font-heading text-white">Aislamiento & Preinstalación</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Despanelado profundo, tratamiento anticorrosión en chapa, colocación de aislamiento termoacústico de alta densidad y canalización oculta de cableados náuticos ignífugos.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-brand-surface border border-brand-border p-6 rounded-2xl relative space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-black font-black flex items-center justify-center text-xl font-heading shadow-md shadow-amber-500/20">
+            03
+          </div>
+          <h3 class="text-lg font-bold font-heading text-white">Carpintería & Plomería</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Corte CNC y montaje artesanal de mobiliario ligero, plomería presurizada con agua fría y caliente, montaje de cocina, cama y equipos de climatización.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-brand-surface border border-brand-border p-6 rounded-2xl relative space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-black font-black flex items-center justify-center text-xl font-heading shadow-md shadow-amber-500/20">
+            04
+          </div>
+          <h3 class="text-lg font-bold font-heading text-white">Trabajo a Entregar</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Control de calidad exhaustivo de todos los sistemas, puesta a punto, limpieza integral y entrega de tu furgoneta lista para arrancar y recorrer el mundo.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Workshop banner callout -->
+      <div class="mt-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-amber-500/15 via-brand-card to-brand-surface border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-white text-base">¿Quieres visitar el taller de Enfocar?</h4>
+            <p class="text-xs text-slate-400">Pide cita previa para ver furgonetas en pleno proceso de camperización y tocar los materiales.</p>
+          </div>
+        </div>
+        <a href="#contacto" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 text-xs font-bold transition whitespace-nowrap">
+          Agendar Visita al Taller
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="opiniones" class="py-24 bg-brand-dark border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <div class="flex items-center justify-center gap-1 text-amber-400 text-lg">
+          ★ ★ ★ ★ ★
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">
+          La opinión de viajeros como tú
+        </h2>
+        <p class="text-slate-400 text-sm">
+          La satisfacción de nuestros clientes se nota en la carretera y en sus aventuras por toda Europa.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-brand-surface border border-brand-border p-7 rounded-3xl space-y-4 relative">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "Dejamos nuestra Ducato en Enfocar con solo una idea en papel y nos entregaron un auténtico apartamento rodante. El aislamiento térmico y el sistema eléctrico autónomo son impecables. Llevamos 8 meses viajando sin conectar a 220V."
+          </p>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
+              MG
+            </div>
+            <div>
+              <div class="font-bold text-sm text-white">Marcos & Gloria</div>
+              <div class="text-[11px] text-slate-400">Fiat Ducato L3H2 • Viaje nórdico</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-brand-surface border border-brand-border p-7 rounded-3xl space-y-4 relative">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "Lo que más destaco es la seriedad y profesionalismo del equipo. Todo impecable, con acabados de primera y cumpliendo los plazos pactados. La atención post-venta para resolver dudas sobre el cuadro eléctrico ha sido de 10."
+          </p>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
+              DR
+            </div>
+            <div>
+              <div class="font-bold text-sm text-white">David Romero</div>
+              <div class="text-[11px] text-slate-400">Volkswagen Transporter T6</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-brand-surface border border-brand-border p-7 rounded-3xl space-y-4 relative">
+          <div class="flex text-amber-400 text-sm">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+            "Los muebles en contrachapado ligero están milimétricamente ajustados, no hacen un solo ruido en baches ni curvas de montaña. Enfocar Camperización trabaja con un amor al detalle que ya no se encuentra."
+          </p>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
+              SL
+            </div>
+            <div>
+              <div class="font-bold text-sm text-white">Sofía Larrea</div>
+              <div class="text-[11px] text-slate-400">Peugeot Boxer L2H2</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-[#080B10] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Information & Guarantee -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+              Hablemos de tu Proyecto
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black font-heading text-white mt-3">
+              Cuéntanos qué tienes en mente
+            </h2>
+            <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+              ¿Tienes ya la furgoneta o estás buscando una antes de camperizar? Te asesoramos desde el minuto cero para que elijas el chasis ideal.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <a href="https://wa.me/5492246518924" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-amber-500/50 transition">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold">Atención Telefónica & WhatsApp</div>
+                <div class="text-sm font-bold text-white mt-0.5">+54 9 2246 518924</div>
+                <div class="text-[11px] text-amber-400">Lunes a Sábado: 09:00 - 18:00</div>
+              </div>
+            </a>
+
+            <a href="mailto:enfocarcamperizacion@gmail.com" class="flex items-start gap-4 p-4 rounded-2xl bg-brand-surface border border-brand-border hover:border-amber-500/50 transition">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold">Correo Electrónico</div>
+                <div class="text-sm font-bold text-white mt-0.5">enfocarcamperizacion@gmail.com</div>
+                <div class="text-[11px] text-slate-400">Respondemos en el día</div>
+              </div>
+            </a>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-surface border border-brand-border">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold">Taller Principal</div>
+                <div class="text-sm font-bold text-white mt-0.5">Avenida 41 N 1124</div>
+                <div class="text-[11px] text-slate-400">Santa Teresita, Buenos Aires 7107</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Lead Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-10 shadow-2xl">
+            <h3 class="font-heading font-bold text-2xl text-white mb-2">Solicita tu presupuesto sin compromiso</h3>
+            <p class="text-xs text-slate-400 mb-8">Completa el formulario y te enviaremos una estimación con desglose de materiales y tiempos.</p>
+
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+              
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Nombre completo *</label>
+                  <input type="text" required placeholder="Ej. Javier Gómez" class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Teléfono / WhatsApp *</label>
+                  <input type="tel" required placeholder="Ej. +54 9 2246 518924" class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Correo Electrónico *</label>
+                  <input type="email" required placeholder="tu@email.com" class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Modelo de furgoneta o idea</label>
+                  <input type="text" placeholder="Ej. Ducato L3H2, VW T6, Berlingo..." class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">¿Qué tipo de trabajo necesitas?</label>
+                <select class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white outline-none transition">
+                  <option value="integral">Camperización Integral Llave en Mano</option>
+                  <option value="muebles">Solo Mobiliario a Medida</option>
+                  <option value="electricidad">Instalación Eléctrica 12V / Placas Solares</option>
+                  <option value="calefaccion">Calefacción Estacionaria / Techo Elevable</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Detalles o necesidades especiales</label>
+                <textarea rows="4" placeholder="Cuéntanos: ¿Cuántas personas viajan/duermen? ¿Viajas con mascotas o bicis? ¿Necesitas ducha caliente interior?" class="w-full bg-brand-card border border-brand-border focus:border-amber-400 focus:ring-1 focus:ring-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition"></textarea>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="terms" required class="w-4 h-4 rounded mt-0.5 accent-amber-500" />
+                <label for="terms" class="text-xs text-slate-400">Acepto la política de privacidad y autorizo a Enfocar Camperización a contactarme para fines de presupuesto.</label>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-extrabold text-base tracking-wide transition shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2">
+                <span>Enviar Solicitud de Presupuesto</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </form>
+
+            <!-- Success Notification Message (Custom Toast replacement for alert) -->
+            <div id="formSuccessMessage" class="hidden mt-4 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold flex items-center gap-3">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>¡Mensaje recibido! Nos pondremos en contacto contigo en las próximas 24 horas con la valoración técnica.</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-[#05070A] border-t border-brand-border py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Logo & Brand statement -->
+        <div class="flex items-center gap-3.5">
+          <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center drop-shadow-md">
+            <img 
+              src="IMG_1780.PNG_2.png" 
+              alt="Enfocar Camperización" 
+              class="w-full h-full object-contain rounded-full"
+              onerror="this.onerror=null; this.src='IMG_1780.PNG.png'; this.onerror=() => { this.src='IMG_1780.PNG'; this.onerror=() => { this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); } }"
+            />
+            <!-- High-fidelity Vector Emblem matching the uploaded logo -->
+            <svg class="w-full h-full hidden" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="250" cy="250" r="244" fill="#0A0D14" stroke="#ffffff" stroke-width="7"/>
+              <circle cx="250" cy="250" r="230" fill="#0A0D14" stroke="#000000" stroke-width="14"/>
+              <circle cx="250" cy="250" r="218" fill="#0A0D14" stroke="#ffffff" stroke-width="5"/>
+              <circle cx="250" cy="250" r="206" fill="#0B0F17" stroke="#000000" stroke-width="8"/>
+              <path d="M 52 250 A 198 198 0 0 1 448 250 Z" fill="#F59E0B"/>
+              <path d="M 60 250 A 190 190 0 0 1 440 250 Z" fill="url(#sun-gradient-footer)"/>
+              <g fill="#0B0F17">
+                <polygon points="310,250 326,200 318,200 334,165 328,165 342,130 356,165 350,165 366,200 358,200 374,250"/>
+                <polygon points="345,250 360,205 353,205 368,172 362,172 376,140 390,172 384,172 399,205 392,205 407,250"/>
+                <polygon points="380,250 392,215 387,215 400,185 395,185 407,158 419,185 414,185 427,215 422,215 435,250"/>
+              </g>
+              <g id="camper-motorhome-footer">
+                <path d="M 115 160 C 115 135 155 120 245 120 L 305 125 C 322 127 330 138 333 155 L 342 225 C 343 235 340 248 332 250 L 118 250 C 114 250 112 245 112 238 L 115 160 Z" fill="#FFFFFF" stroke="#0B0F17" stroke-width="7" stroke-linejoin="round"/>
+                <path d="M 125 145 C 160 135 240 135 295 140" stroke="#0B0F17" stroke-width="5" stroke-linecap="round"/>
+                <rect x="128" y="152" width="85" height="6" rx="2" fill="#0B0F17"/>
+                <rect x="128" y="166" width="30" height="42" rx="2" fill="#FFFFFF" stroke="#0B0F17" stroke-width="4"/>
+                <rect x="165" y="166" width="26" height="20" rx="2" fill="#1E293B" stroke="#0B0F17" stroke-width="3.5"/>
+                <rect x="197" y="166" width="26" height="20" rx="2" fill="#1E293B" stroke="#0B0F17" stroke-width="3.5"/>
+                <path d="M 114 220 L 338 220 L 336 242 L 115 242 Z" fill="#E2E8F0" stroke="#0B0F17" stroke-width="4"/>
+                <path d="M 235 142 L 310 148 C 322 150 326 156 328 170 L 332 215 L 235 215 Z" fill="#FFFFFF" stroke="#0B0F17" stroke-width="5"/>
+                <path d="M 252 148 L 306 152 C 314 154 316 158 317 172 L 320 208 L 252 208 Z" fill="#0F172A" stroke="#0B0F17" stroke-width="4"/>
+                <polygon points="268,152 284,153 260,208 248,208" fill="#FFFFFF" opacity="0.85"/>
+                <path d="M 235 152 L 246 152 L 246 205 L 235 205 Z" fill="#0F172A"/>
+                <rect x="318" y="172" width="7" height="18" rx="3" fill="#0B0F17"/>
+                <path d="M 265 216 L 333 216 L 330 240 L 265 240 Z" fill="#F8FAFC" stroke="#0B0F17" stroke-width="4"/>
+                <path d="M 280 226 C 298 238 315 238 326 226" stroke="#0B0F17" stroke-width="6" stroke-linecap="round" fill="none"/>
+                <polygon points="268,218 282,223 275,232 268,228" fill="#F59E0B" stroke="#0B0F17" stroke-width="2.5"/>
+                <polygon points="328,218 316,223 321,232 328,228" fill="#F59E0B" stroke="#0B0F17" stroke-width="2.5"/>
+                <ellipse cx="138" cy="242" rx="10" ry="14" fill="#0B0F17"/>
+                <ellipse cx="138" cy="242" rx="4" ry="7" fill="#FFFFFF"/>
+                <ellipse cx="150" cy="242" rx="9" ry="14" fill="#0B0F17"/>
+                <ellipse cx="150" cy="242" rx="4" ry="7" fill="#FFFFFF"/>
+                <ellipse cx="232" cy="242" rx="10" ry="15" fill="#0B0F17"/>
+                <ellipse cx="232" cy="242" rx="4.5" ry="8" fill="#FFFFFF"/>
+              </g>
+              <g id="banner-footer">
+                <path d="M 45 285 Q 250 250 455 285 L 445 345 Q 250 310 55 345 Z" fill="#000000" opacity="0.6"/>
+                <path d="M 48 275 Q 250 240 452 275 L 442 338 Q 250 305 58 338 Z" fill="#0B0F17" stroke="#FFFFFF" stroke-width="8" stroke-linejoin="round"/>
+                <text x="250" y="306" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" stroke="#0B0F17" stroke-width="3" letter-spacing="3">ENFOCAR</text>
+                <text x="250" y="328" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15" fill="#FFFFFF" letter-spacing="4">— CAMPERIZACIÓN —</text>
+              </g>
+              <path d="M 120 375 A 170 170 0 0 0 380 375" stroke="#F59E0B" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <g fill="#F59E0B" stroke="#0B0F17" stroke-width="1.5">
+                <polygon points="208,355 212,343 216,355 228,355 218,362 222,374 212,367 202,374 206,362 196,355"/>
+                <polygon points="250,351 255,337 260,351 274,351 262,360 267,374 255,365 243,374 248,360 236,351"/>
+                <polygon points="292,355 296,343 300,355 312,355 302,362 306,374 296,367 286,374 290,362 280,355"/>
+              </g>
+              <defs>
+                <linearGradient id="sun-gradient-footer" x1="250" y1="50" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FBBF24"/>
+                  <stop offset="100%" stop-color="#D97706"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <span class="font-heading font-black tracking-wider text-base text-white">ENFOCAR CAMPERIZACIÓN</span>
+            <p class="text-[11px] text-slate-500">Diseño y fabricación de campers a medida.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400">
+          <a href="#servicios" class="hover:text-amber-400 transition">Servicios</a>
+          <a href="#configurador" class="hover:text-amber-400 transition">Calculador</a>
+          <a href="#galeria" class="hover:text-amber-400 transition">Proyectos</a>
+          <a href="#contacto" class="hover:text-amber-400 transition">Contacto</a>
+          <a href="#" class="hover:text-amber-400 transition">Aviso Legal</a>
+          <a href="#" class="hover:text-amber-400 transition">Privacidad</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-xs text-slate-500 text-center md:text-right">
+          © 2026 Enfocar Camperización. Todos los derechos reservados.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <!-- Quick WhatsApp Floating Bubble -->
+    <a href="https://wa.me/5492246518924?text=Hola%20Enfocar%20Camperizaci%C3%B3n,%20quisiera%20consultar%20sobre%20mi%20proyecto%20camper" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-white px-4 py-3 rounded-full shadow-2xl transition duration-300 transform hover:scale-105" title="Chatear por WhatsApp">
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.06c-1.49 0-2.95-.4-4.22-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.12 8.12 0 01-1.25-4.28c0-4.51 3.67-8.18 8.18-8.18 2.19 0 4.24.85 5.79 2.4 1.55 1.55 2.4 3.6 2.4 5.78 0 4.51-3.67 8.18-8.18 8.18zm4.49-6.13c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.99.69.45-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+      <span class="text-xs font-extrabold hidden sm:inline tracking-wide">¿Dudas? Escríbenos</span>
+    </a>
+  </div>
+
+  <!-- Modal for Lead Capture with Budget Details -->
+  <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 hidden">
+    <div class="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="space-y-4">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        </div>
+        
+        <h3 class="text-xl font-bold font-heading text-white">Recibe tu desglose personalizado</h3>
+        <p class="text-xs text-slate-300">
+          Te enviaremos el desglose completo del presupuesto calculado (<span id="modalPriceSummary" class="text-amber-400 font-bold"></span>) junto con el catálogo de materiales y opciones de financiación.
+        </p>
+
+        <form onsubmit="handleModalSubmit(event)" class="space-y-3 pt-2">
+          <div>
+            <label class="block text-[11px] font-bold uppercase text-slate-300 mb-1">Nombre</label>
+            <input type="text" required placeholder="Tu nombre" class="w-full bg-brand-card border border-brand-border rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 outline-none focus:border-amber-400" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase text-slate-300 mb-1">Email</label>
+            <input type="email" required placeholder="tu@email.com" class="w-full bg-brand-card border border-brand-border rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 outline-none focus:border-amber-400" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold uppercase text-slate-300 mb-1">Teléfono</label>
+            <input type="tel" required placeholder="+34 600 000 000" class="w-full bg-brand-card border border-brand-border rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 outline-none focus:border-amber-400" />
+          </div>
+
+          <div id="modalSuccess" class="hidden p-3 rounded-xl bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+            ¡Desglose enviado! Revisa tu bandeja de entrada o WhatsApp en breve.
+          </div>
+
+          <div class="pt-2 flex gap-3">
+            <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-xs transition">
+              Confirmar y Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State Variables
+    let currentVehicleName = 'Furgón Mediano';
+
+    // Vehicle Selection logic
+    function selectVehicle(key) {
+      const cards = document.querySelectorAll('.vehicle-card');
+      cards.forEach(card => {
+        card.classList.remove('active', 'border-amber-400', 'shadow-lg', 'shadow-amber-500/10');
+        card.classList.add('border-brand-border');
+      });
+
+      const selectedCard = document.querySelector(`[data-vehicle="${key}"]`);
+      if (selectedCard) {
+        selectedCard.classList.add('active', 'border-amber-400', 'shadow-lg', 'shadow-amber-500/10');
+        selectedCard.classList.remove('border-brand-border');
+        currentVehicleName = selectedCard.querySelector('h4').innerText;
+      }
+
+      calculateTotal();
+    }
+
+    // Scroll directly to configurator and pre-select
+    function scrollToConfigurator(vehicleKey) {
+      const configSection = document.getElementById('configurador');
+      if (configSection) {
+        configSection.scrollIntoView({ behavior: 'smooth' });
+        if (vehicleKey) {
+          selectVehicle(vehicleKey);
+        }
+      }
+    }
+
+    // Update selection summary
+    function calculateTotal() {
+      const checkboxes = document.querySelectorAll('.addon-check:checked');
+      const count = checkboxes.length;
+
+      const summary = document.getElementById('selectionSummary');
+      if (summary) {
+        summary.innerText = `${currentVehicleName} con ${count} módulo(s) seleccionado(s)`;
+      }
+    }
+
+    // Send budget to WhatsApp with prefilled message (purposes only, no prices)
+    function sendQuoteToWhatsApp() {
+      const checkboxes = document.querySelectorAll('.addon-check:checked');
+      let extrasNames = [];
+      checkboxes.forEach(cb => {
+        extrasNames.push('• ' + cb.getAttribute('data-name'));
+      });
+
+      const text = `¡Hola Enfocar Camperización! He configurado un proyecto en su web:\n\n*Vehículo:* ${currentVehicleName}\n*Equipamientos seleccionados:*\n${extrasNames.join('\n')}\n\n¿Podrían darme más información y cotización?`;
+      
+      const whatsappUrl = `https://wa.me/5492246518924?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Gallery Filter Logic
+    function filterGallery(category) {
+      const buttons = document.querySelectorAll('.gallery-filter');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = 'gallery-filter active px-4 py-2 rounded-xl text-xs font-bold border transition bg-amber-500 text-black border-amber-500';
+        } else {
+          btn.className = 'gallery-filter px-4 py-2 rounded-xl text-xs font-bold border border-brand-border bg-brand-card text-slate-300 hover:text-white transition';
+        }
+      });
+
+      const cards = document.querySelectorAll('.gallery-card');
+      cards.forEach(card => {
+        const type = card.getAttribute('data-type');
+        if (category === 'all' || type === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Handlers
+    function openModalWithQuote() {
+      calculateTotal();
+      document.getElementById('quoteModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('quoteModal').classList.add('hidden');
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const msg = document.getElementById('modalSuccess');
+      msg.classList.remove('hidden');
+      setTimeout(() => {
+        closeModal();
+        msg.classList.add('hidden');
+      }, 2500);
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const successBox = document.getElementById('formSuccessMessage');
+      if (successBox) {
+        successBox.classList.remove('hidden');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      e.target.reset();
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Initial calculation on load
+    window.addEventListener('DOMContentLoaded', () => {
+      calculateTotal();
+    });
+  </script>
+</body>
+</html>
