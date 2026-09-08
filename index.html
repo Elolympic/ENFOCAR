@@ -3,7 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enfocar Camperización | Taller Artesanal de Furgonetas y Motorhomes</title>
+  <title>Enfocar Camperización | Taller Artesanal de Furgonetas y Motorhomes en Santa Teresita</title>
+  <meta name="description" content="Taller artesanal especializado en camperizaciones a medida, motorhomes, furgones medianos y gran volumen en Santa Teresita. Aislamiento térmico, energía solar y carpintería personalizada.">
+  <meta name="keywords" content="camperizacion, motorhome, santa teresita, furgoneta camper, aislamiento termico camper, panel solar motorhome, enfocar camperizacion">
+  <meta name="author" content="Enfocar Camperización">
+  <meta name="robots" content="index, follow">
+
+  <!-- Geo Meta Tags for Santa Teresita -->
+  <meta name="geo.region" content="AR-B">
+  <meta name="geo.placename" content="Santa Teresita">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Enfocar Camperización | Taller Artesanal de Furgonetas y Motorhomes">
+  <meta property="og:description" content="Diseño y fabricación de camperizaciones integrales y a medida en Santa Teresita. Presupuesto personalizado y asesoramiento experto.">
+  <meta property="og:image" content="https://i.ibb.co/xKThkJFX/IMG-1780-PNG.png">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Schema.org LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Enfocar Camperización",
+    "image": "https://i.ibb.co/xKThkJFX/IMG-1780-PNG.png",
+    "telephone": "+5492246518924",
+    "email": "enfocarcamperizacion@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. 41 N° 1124",
+      "addressLocality": "Santa Teresita",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "B7107",
+      "addressCountry": "AR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.1",
+      "reviewCount": "25"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,31 +97,33 @@
       background: #F59E0B;
       border-radius: 9999px;
     }
-    .badge-glow {
-      box-shadow: 0 0 25px rgba(245, 158, 11, 0.15);
-    }
   </style>
 </head>
 <body class="bg-brand-dark text-slate-100 selection:bg-amber-500 selection:text-black">
 
   <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border/80 transition-all duration-300">
+  <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
       <a href="#" class="flex items-center group cursor-pointer" aria-label="Volver al inicio">
         <img src="https://i.ibb.co/xKThkJFX/IMG-1780-PNG.png" width="100" alt="Enfocar Camperización" class="transition-transform group-hover:scale-105 duration-200">
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium">
         <a href="#servicios" class="text-slate-300 hover:text-amber-400 transition-colors">Servicios</a>
         <a href="#configurador" class="text-slate-300 hover:text-amber-400 transition-colors">Configuración</a>
         <a href="#proceso" class="text-slate-300 hover:text-amber-400 transition-colors">Metodología</a>
+        <a href="#videos" class="text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-brands fa-youtube text-red-500"></i>
+          <span>Videos</span>
+        </a>
         <a href="#galeria" class="text-slate-300 hover:text-amber-400 transition-colors">Galería</a>
         <a href="#opiniones" class="text-slate-300 hover:text-amber-400 transition-colors">Opiniones</a>
       </nav>
 
-      <!-- CTA Button -->
-      <div class="hidden md:flex items-center space-x-4">
+      <!-- Right Header Actions (CTA Button) -->
+      <div class="hidden sm:flex items-center">
         <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-sm transition-all shadow-md shadow-amber-500/20 flex items-center gap-2">
           <span>Contáctanos</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -82,18 +131,22 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Abrir Menú">
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2" aria-label="Abrir Menú">
         <i class="fa-solid fa-bars text-2xl"></i>
       </button>
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-5 space-y-4">
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-surface border-b border-brand-border px-6 py-5 space-y-4">
       <a href="#servicios" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1">Servicios</a>
       <a href="#configurador" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1">Configuración</a>
       <a href="#proceso" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1">Metodología</a>
+      <a href="#videos" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1 flex items-center gap-2">
+        <i class="fa-brands fa-youtube text-red-500"></i> Videos & Redes
+      </a>
       <a href="#galeria" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1">Galería</a>
       <a href="#opiniones" class="block text-slate-300 hover:text-amber-400 text-base font-medium py-1">Opiniones</a>
+
       <a href="#contacto" class="block w-full text-center py-3 bg-amber-500 text-neutral-950 font-bold rounded-xl mt-2">
         Contáctanos
       </a>
@@ -101,7 +154,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+  <section class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
     <!-- Ambient glowing gradients -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -451,8 +504,185 @@
     </div>
   </section>
 
+  <!-- YouTube Channel & Social Showcase Section (As shown in screenshot) -->
+  <section id="videos" class="py-20 bg-brand-dark border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Container matching screenshot design -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: YouTube Video Card (8 cols) -->
+        <div class="lg:col-span-8 bg-brand-surface/90 border border-brand-border rounded-3xl p-6 sm:p-7">
+          
+          <!-- Channel header in card -->
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div class="w-12 h-12 rounded-full overflow-hidden border border-amber-500/40 bg-black flex-shrink-0 flex items-center justify-center">
+                <img src="https://i.ibb.co/xKThkJFX/IMG-1780-PNG.png" alt="Enfocar Camperización" class="w-full h-full object-contain">
+              </div>
+              <div class="flex flex-col justify-center min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="text-white font-black text-sm sm:text-base tracking-wide uppercase leading-normal">ENFOCAR CAMPERIZACIÓN</h3>
+                  <span class="bg-red-500/10 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md whitespace-nowrap">+14.8K subs</span>
+                </div>
+                <p class="text-amber-400 text-xs font-semibold mt-0.5 leading-normal">@enfocarcamperizacion</p>
+              </div>
+            </div>
+
+            <!-- YouTube Action Buttons -->
+            <div class="flex items-center gap-2 shrink-0">
+              <a href="https://www.youtube.com/@enfocarcamperizacion?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-xl transition-all flex items-center gap-2 shadow-md shadow-red-600/20">
+                <i class="fa-brands fa-youtube text-sm"></i>
+                <span>Suscribirme</span>
+              </a>
+              <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-slate-300 hover:text-white transition-colors" title="Abrir canal en YouTube">
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Player Display Box -->
+          <div id="videoDisplayContainer" class="relative aspect-video rounded-2xl overflow-hidden border border-brand-border bg-black group cursor-pointer" onclick="playCurrentVideo()">
+            <img id="videoThumb" src="https://img.youtube.com/vi/UtOHAQIAses/maxresdefault.jpg" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/UtOHAQIAses/hqdefault.jpg';" alt="Entrega de Motorhome en Enfocar Camperización" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+              
+              <!-- Video Title Overlay -->
+              <div class="relative z-10">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2.5 py-0.5 rounded mb-2">Video Destacado</span>
+                    <h4 id="videoTitleOverlay" class="text-white font-extrabold text-base sm:text-xl leading-snug drop-shadow-md">
+                      LO DEJARON TODO PARA CUMPLIR SU SUEÑO | Entrega Emocionante
+                    </h4>
+                    <p class="text-slate-300 text-xs mt-1">Hacé clic para reproducir en vivo</p>
+                  </div>
+
+                  <a id="videoDirectLink" href="https://www.youtube.com/watch?v=UtOHAQIAses" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors">
+                    <span>Ver en YouTube</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Big Centered Play Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
+                  <i class="fa-solid fa-play text-xl sm:text-2xl ml-1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Selector Tabs matching screenshot -->
+          <div class="mt-6">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3">VIDEOS DESTACADOS DEL TALLER:</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              
+              <!-- Tab 1 -->
+              <button onclick="selectVideoTab(0)" id="videoTab0" class="video-tab text-left p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer">
+                <span class="text-[11px] font-bold text-amber-400 block flex items-center gap-1">
+                  ★ MÁS VISTO (24K)
+                </span>
+                <span class="text-xs font-bold text-white block mt-1">Entrega de Motorhome</span>
+              </button>
+
+              <!-- Tab 2 -->
+              <button onclick="selectVideoTab(1)" id="videoTab1" class="video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
+                <span class="text-[11px] font-bold text-amber-400 block flex items-center gap-1">
+                  ⚡ TÉCNICO
+                </span>
+                <span class="text-xs font-bold text-slate-300 block mt-1">Aire 12V y Baterías</span>
+              </button>
+
+              <!-- Tab 3 -->
+              <button onclick="selectVideoTab(2)" id="videoTab2" class="video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
+                <span class="text-[11px] font-bold text-cyan-400 block flex items-center gap-1">
+                  🚌 TRANSFORMACIÓN
+                </span>
+                <span class="text-xs font-bold text-slate-300 block mt-1">Desarmado de Colectivo</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Social Cards (4 cols) matching screenshot -->
+        <div class="lg:col-span-4 space-y-4">
+          
+          <!-- Instagram Card -->
+          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-xl shadow-md">
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">Instagram</h4>
+                  <p class="text-pink-400 text-xs font-semibold">@enfocar.camperizacion</p>
+                </div>
+              </div>
+              <span class="bg-pink-500/10 text-pink-400 border border-pink-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Reels</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Avances diarios, fotos de las terminaciones, encuestas y el detrás de escena de cada vehículo en el taller.
+            </p>
+            <a href="https://www.instagram.com/enfocar.camperizacion/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-pink-500 hover:opacity-90 text-white font-bold text-xs flex items-center justify-center gap-2 transition-opacity">
+              <i class="fa-brands fa-instagram text-sm"></i>
+              <span>Seguir en Instagram</span>
+            </a>
+          </div>
+
+          <!-- TikTok Card -->
+          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-neutral-900 border border-cyan-500/40 text-cyan-400 flex items-center justify-center text-xl shadow-md">
+                  <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">TikTok</h4>
+                  <p class="text-cyan-400 text-xs font-semibold">@enfocar.camperizacion</p>
+                </div>
+              </div>
+              <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Videos cortos</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Tips rápidos de camperización, soluciones de espacio y humor rodantero en formato vertical.
+            </p>
+            <a href="https://www.tiktok.com/@enfocar.camperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-neutral-900 border border-cyan-500/40 hover:bg-cyan-950/40 text-cyan-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+              <i class="fa-brands fa-tiktok text-sm"></i>
+              <span>Seguir en TikTok</span>
+            </a>
+          </div>
+
+          <!-- Canal Oficial Card -->
+          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-xl border border-red-500/30">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-sm">Canal Oficial</h4>
+                <p class="text-slate-400 text-xs">+250 videos y vlogs subidos</p>
+              </div>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Tutoriales técnicos, pruebas de componentes y vlogs completos para aprender cómo construimos cada camper.
+            </p>
+            <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-600/50 hover:bg-red-600/30 text-red-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+              <i class="fa-brands fa-youtube text-sm"></i>
+              <span>Explorar Canal Completo</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Gallery Section -->
-  <section id="galeria" class="py-20 bg-brand-dark border-t border-brand-border">
+  <section id="galeria" class="py-20 bg-brand-surface/50 border-t border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
@@ -552,12 +782,12 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="opiniones" class="py-20 bg-brand-surface/50 border-t border-brand-border">
+  <!-- Testimonials Section with Real Google Maps Reviews -->
+  <section id="opiniones" class="py-20 bg-brand-dark border-t border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-brand-border text-xs text-slate-300 mb-3">
-          <!-- Google Icon -->
+          <!-- Google SVG Icon -->
           <svg class="w-4 h-4" viewBox="0 0 24 24">
             <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
             <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -874,6 +1104,149 @@
   <script>
     // State management for configurator
     let currentVehicleName = "Furgoneta Mediana (Kangoo, Partner, Berlingo)";
+
+    // YouTube featured videos list with real official YouTube thumbnails
+    const videoData = [
+      {
+        id: "UtOHAQIAses",
+        title: "LO DEJARON TODO PARA CUMPLIR SU SUEÑO | Entrega Emocionante",
+        badge: "★ MÁS VISTO (24K)",
+        thumb: "https://img.youtube.com/vi/UtOHAQIAses/maxresdefault.jpg"
+      },
+      {
+        id: "qscxzSwPeZM",
+        title: "AIRE ACONDICIONADO 12V en MOTORHOME ¿te MATA la BATERIA?",
+        badge: "⚡ TÉCNICO",
+        thumb: "https://img.youtube.com/vi/qscxzSwPeZM/maxresdefault.jpg"
+      },
+      {
+        id: "4eILwG2e_IY",
+        title: "¡DESTROZAMOS ESTE COLECTIVO! | NO VAS A CREER LO QUE NOS PASÓ",
+        badge: "🚌 TRANSFORMACIÓN",
+        thumb: "https://img.youtube.com/vi/4eILwG2e_IY/maxresdefault.jpg"
+      }
+    ];
+
+    let currentVideoIndex = 0;
+
+    // Video Tab Switcher
+    function selectVideoTab(index) {
+      currentVideoIndex = index;
+      const v = videoData[index];
+
+      // Update active tab styles
+      for (let i = 0; i < videoData.length; i++) {
+        const tab = document.getElementById(`videoTab${i}`);
+        if (tab) {
+          if (i === index) {
+            tab.className = "video-tab text-left p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer";
+          } else {
+            tab.className = "video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer";
+          }
+        }
+      }
+
+      // Update text overlays
+      const titleEl = document.getElementById("videoTitleOverlay");
+      if (titleEl) titleEl.textContent = v.title;
+
+      const directLink = document.getElementById("videoDirectLink");
+      if (directLink) directLink.href = `https://www.youtube.com/watch?v=${v.id}`;
+
+      // Reset to preview container with official YouTube thumbnail
+      const container = document.getElementById("videoDisplayContainer");
+      if (container) {
+        container.innerHTML = `
+          <img id="videoThumb" src="${v.thumb}" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/${v.id}/hqdefault.jpg';" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2.5 py-0.5 rounded mb-2">${v.badge}</span>
+                  <h4 id="videoTitleOverlay" class="text-white font-extrabold text-base sm:text-xl leading-snug drop-shadow-md">${v.title}</h4>
+                  <p class="text-slate-300 text-xs mt-1">Hacé clic para reproducir en vivo</p>
+                </div>
+                <a id="videoDirectLink" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors">
+                  <span>Ver en YouTube</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
+                <i class="fa-solid fa-play text-xl sm:text-2xl ml-1"></i>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Embed and autoplay on user click
+    function playCurrentVideo() {
+      const v = videoData[currentVideoIndex];
+      const container = document.getElementById("videoDisplayContainer");
+      if (container) {
+        container.innerHTML = `
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1" 
+            title="${v.title}" 
+            class="w-full h-full border-0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        `;
+      }
+    }
+
+    // Update summary in live UI
+    function updateConfiguratorSummary() {
+      const vehicleEl = document.getElementById('summaryVehicleName');
+      if (vehicleEl) {
+        vehicleEl.textContent = currentVehicleName;
+      }
+
+      const listEl = document.getElementById('summaryAddonsList');
+      if (listEl) {
+        listEl.innerHTML = '';
+        const checkboxes = document.querySelectorAll('.addon-check:checked');
+        if (checkboxes.length === 0) {
+          listEl.innerHTML = '<li class="text-slate-500 italic">Ningún módulo adicional seleccionado</li>';
+        } else {
+          checkboxes.forEach(cb => {
+            const name = cb.getAttribute('data-name');
+            const li = document.createElement('li');
+            li.className = 'flex items-center gap-2';
+            li.innerHTML = '<span class="text-amber-400 font-bold">✓</span> <span>' + name + '</span>';
+            listEl.appendChild(li);
+          });
+        }
+      }
+    }
+
+    // Vehicle cards selection
+    document.querySelectorAll('.vehicle-card').forEach(card => {
+      card.addEventListener('click', function () {
+        document.querySelectorAll('.vehicle-card').forEach(c => {
+          c.classList.remove('border-amber-500', 'border-2');
+          c.classList.add('border-brand-border', 'border');
+          const icon = c.querySelector('i');
+          if (icon) {
+            icon.classList.remove('text-amber-400');
+            icon.classList.add('text-slate-400');
+          }
+        });
+        this.classList.remove('border-brand-border', 'border');
+        this.classList.add('border-amber-500', 'border-2');
+        const activeIcon = this.querySelector('i');
+        if (activeIcon) {
+          activeIcon.classList.remove('text-slate-400');
+          activeIcon.classList.add('text-amber-400');
+        }
+        currentVehicleName = this.getAttribute('data-vehicle');
+        updateConfiguratorSummary();
+      });
+    });
 
     // Update summary in live UI
     function updateConfiguratorSummary() {
