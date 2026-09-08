@@ -65,6 +65,9 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
           },
+          screens: {
+            'xs': '420px',
+          },
           colors: {
             brand: {
               gold: '#F59E0B',
@@ -410,7 +413,7 @@
               </label>
 
               <!-- Item 5 -->
-              <label class="flex items-start gap-3 bg-brand-card border border-brand-border p-4 rounded-xl cursor-pointer hover:border-amber-400/50 transition-colors">
+              <label class="flex items-start gap-3 bg-brand-card border border-brand-border hover:border-amber-400/50 p-4 rounded-xl cursor-pointer transition-colors">
                 <input type="checkbox" class="addon-check mt-1 w-5 h-5 accent-amber-500 rounded" data-name="Calefacción diésel estacionaria">
                 <div>
                   <div class="font-semibold text-white text-sm">Calefacción Estacionaria Diésel</div>
@@ -419,7 +422,7 @@
               </label>
 
               <!-- Item 6 -->
-              <label class="flex items-start gap-3 bg-brand-card border border-brand-border p-4 rounded-xl cursor-pointer hover:border-amber-400/50 transition-colors">
+              <label class="flex items-start gap-3 bg-brand-card border border-brand-border hover:border-amber-400/50 p-4 rounded-xl cursor-pointer transition-colors">
                 <input type="checkbox" class="addon-check mt-1 w-5 h-5 accent-amber-500 rounded" data-name="Aire Acondicionado de habitáculo">
                 <div>
                   <div class="font-semibold text-white text-sm">Aire Acondicionado</div>
@@ -504,175 +507,203 @@
     </div>
   </section>
 
-  <!-- YouTube Channel & Social Showcase Section (As shown in screenshot) -->
+  <!-- YouTube Channel & Social Showcase Section -->
   <section id="videos" class="py-20 bg-brand-dark border-t border-brand-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Container matching screenshot design -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
         
         <!-- Left: YouTube Video Card (8 cols) -->
-        <div class="lg:col-span-8 bg-brand-surface/90 border border-brand-border rounded-3xl p-6 sm:p-7">
+        <div class="lg:col-span-8 bg-brand-surface/90 border border-brand-border rounded-3xl p-4 sm:p-7">
           
-          <!-- Channel header in card -->
-          <div class="flex items-center justify-between gap-4 mb-6">
-            <div class="flex items-center gap-3.5 min-w-0">
-              <div class="w-12 h-12 rounded-full overflow-hidden border border-amber-500/40 bg-black flex-shrink-0 flex items-center justify-center">
+          <!-- Channel header in card: optimized for mobile -->
+          <div class="flex items-center justify-between gap-3 mb-4 sm:mb-6">
+            <div class="flex items-center gap-2.5 sm:gap-3.5 min-w-0 flex-1">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-amber-500/40 bg-black flex-shrink-0 flex items-center justify-center">
                 <img src="https://i.ibb.co/xKThkJFX/IMG-1780-PNG.png" alt="Enfocar Camperización" class="w-full h-full object-contain">
               </div>
               <div class="flex flex-col justify-center min-w-0">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <h3 class="text-white font-black text-sm sm:text-base tracking-wide uppercase leading-normal">ENFOCAR CAMPERIZACIÓN</h3>
-                  <span class="bg-red-500/10 text-red-400 border border-red-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md whitespace-nowrap">+14.8K subs</span>
+                <div class="flex items-center gap-1.5 sm:gap-2">
+                  <h3 class="text-white font-black text-xs sm:text-base tracking-wide uppercase truncate leading-tight">ENFOCAR CAMPERIZACIÓN</h3>
+                  <span class="bg-red-500/10 text-red-400 border border-red-500/30 text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap">+14.8K</span>
                 </div>
-                <p class="text-amber-400 text-xs font-semibold mt-0.5 leading-normal">@enfocarcamperizacion</p>
+                <p class="text-amber-400 text-[11px] sm:text-xs font-semibold mt-0.5 truncate leading-tight">@enfocarcamperizacion</p>
               </div>
             </div>
 
-            <!-- YouTube Action Buttons -->
+            <!-- YouTube Action Buttons: Hide Subscribe on mobile to prevent overlapping -->
             <div class="flex items-center gap-2 shrink-0">
-              <a href="https://www.youtube.com/@enfocarcamperizacion?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-xl transition-all flex items-center gap-2 shadow-md shadow-red-600/20">
+              <a href="https://www.youtube.com/@enfocarcamperizacion?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-xl transition-all items-center gap-2 shadow-md shadow-red-600/20">
                 <i class="fa-brands fa-youtube text-sm"></i>
                 <span>Suscribirme</span>
               </a>
-              <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-slate-300 hover:text-white transition-colors" title="Abrir canal en YouTube">
+              <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center text-slate-300 hover:text-white transition-colors" title="Abrir canal en YouTube">
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               </a>
             </div>
           </div>
 
           <!-- Video Player Display Box -->
-          <div id="videoDisplayContainer" class="relative aspect-video rounded-2xl overflow-hidden border border-brand-border bg-black group cursor-pointer" onclick="playCurrentVideo()">
+          <div id="videoDisplayContainer" class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-brand-border bg-black group cursor-pointer" onclick="playCurrentVideo()">
             <img id="videoThumb" src="https://img.youtube.com/vi/UtOHAQIAses/maxresdefault.jpg" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/UtOHAQIAses/hqdefault.jpg';" alt="Entrega de Motorhome en Enfocar Camperización" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-3 sm:p-6">
               
-              <!-- Video Title Overlay -->
+              <!-- Video Title Overlay: Scaled down for mobile -->
               <div class="relative z-10">
-                <div class="flex items-center justify-between gap-4">
-                  <div>
-                    <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2.5 py-0.5 rounded mb-2">Video Destacado</span>
-                    <h4 id="videoTitleOverlay" class="text-white font-extrabold text-base sm:text-xl leading-snug drop-shadow-md">
+                <div class="flex items-center justify-between gap-2 sm:gap-4">
+                  <div class="min-w-0 flex-1">
+                    <span class="inline-block text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2 py-0.5 rounded mb-1 sm:mb-2">Video Destacado</span>
+                    <h4 id="videoTitleOverlay" class="text-white font-extrabold text-xs sm:text-base lg:text-xl leading-snug drop-shadow-md line-clamp-2 sm:line-clamp-none">
                       LO DEJARON TODO PARA CUMPLIR SU SUEÑO | Entrega Emocionante
                     </h4>
-                    <p class="text-slate-300 text-xs mt-1">Hacé clic para reproducir en vivo</p>
+                    <p class="text-slate-300 text-[10px] sm:text-xs mt-0.5 sm:mt-1 hidden xs:block">Hacé clic para reproducir en vivo</p>
                   </div>
 
-                  <a id="videoDirectLink" href="https://www.youtube.com/watch?v=UtOHAQIAses" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors">
+                  <a id="videoDirectLink" href="https://www.youtube.com/watch?v=UtOHAQIAses" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors shrink-0">
                     <span>Ver en YouTube</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                   </a>
                 </div>
               </div>
 
-              <!-- Big Centered Play Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
-                  <i class="fa-solid fa-play text-xl sm:text-2xl ml-1"></i>
+              <!-- Centered Play Button: Scaled down on mobile -->
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
+                  <i class="fa-solid fa-play text-base sm:text-2xl ml-0.5 sm:ml-1"></i>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Video Selector Tabs matching screenshot -->
-          <div class="mt-6">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-3">VIDEOS DESTACADOS DEL TALLER:</span>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <!-- Video Selector Tabs -->
+          <div class="mt-4 sm:mt-6">
+            <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2 sm:mb-3">VIDEOS DESTACADOS DEL TALLER:</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
               
               <!-- Tab 1 -->
-              <button onclick="selectVideoTab(0)" id="videoTab0" class="video-tab text-left p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer">
-                <span class="text-[11px] font-bold text-amber-400 block flex items-center gap-1">
+              <button onclick="selectVideoTab(0)" id="videoTab0" class="video-tab text-left p-2.5 sm:p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer">
+                <span class="text-[10px] sm:text-[11px] font-bold text-amber-400 flex items-center gap-1">
                   ★ MÁS VISTO (24K)
                 </span>
-                <span class="text-xs font-bold text-white block mt-1">Entrega de Motorhome</span>
+                <span class="text-xs font-bold text-white block mt-0.5 sm:mt-1 truncate">Entrega de Motorhome</span>
               </button>
 
               <!-- Tab 2 -->
-              <button onclick="selectVideoTab(1)" id="videoTab1" class="video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
-                <span class="text-[11px] font-bold text-amber-400 block flex items-center gap-1">
+              <button onclick="selectVideoTab(1)" id="videoTab1" class="video-tab text-left p-2.5 sm:p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
+                <span class="text-[10px] sm:text-[11px] font-bold text-amber-400 flex items-center gap-1">
                   ⚡ TÉCNICO
                 </span>
-                <span class="text-xs font-bold text-slate-300 block mt-1">Aire 12V y Baterías</span>
+                <span class="text-xs font-bold text-slate-300 block mt-0.5 sm:mt-1 truncate">Aire 12V y Baterías</span>
               </button>
 
               <!-- Tab 3 -->
-              <button onclick="selectVideoTab(2)" id="videoTab2" class="video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
-                <span class="text-[11px] font-bold text-cyan-400 block flex items-center gap-1">
+              <button onclick="selectVideoTab(2)" id="videoTab2" class="video-tab text-left p-2.5 sm:p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer">
+                <span class="text-[10px] sm:text-[11px] font-bold text-cyan-400 flex items-center gap-1">
                   🚌 TRANSFORMACIÓN
                 </span>
-                <span class="text-xs font-bold text-slate-300 block mt-1">Desarmado de Colectivo</span>
+                <span class="text-xs font-bold text-slate-300 block mt-0.5 sm:mt-1 truncate">Desarmado de Colectivo</span>
               </button>
 
             </div>
           </div>
         </div>
 
-        <!-- Right: Social Cards (4 cols) matching screenshot -->
-        <div class="lg:col-span-4 space-y-4">
+        <!-- Right: Social Cards (Icon-only on mobile, full cards on desktop) -->
+        <div class="lg:col-span-4 w-full">
           
-          <!-- Instagram Card -->
-          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-xl shadow-md">
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold text-sm">Instagram</h4>
-                  <p class="text-pink-400 text-xs font-semibold">@enfocar.camperizacion</p>
-                </div>
-              </div>
-              <span class="bg-pink-500/10 text-pink-400 border border-pink-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Reels</span>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Avances diarios, fotos de las terminaciones, encuestas y el detrás de escena de cada vehículo en el taller.
-            </p>
-            <a href="https://www.instagram.com/enfocar.camperizacion/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-pink-500 hover:opacity-90 text-white font-bold text-xs flex items-center justify-center gap-2 transition-opacity">
-              <i class="fa-brands fa-instagram text-sm"></i>
-              <span>Seguir en Instagram</span>
+          <!-- Mobile Social Bar: ONLY ICONS ON MOBILE -->
+          <div class="flex lg:hidden items-center justify-around bg-brand-surface/90 border border-brand-border rounded-2xl p-4 shadow-lg">
+            <!-- Instagram Icon Mobile -->
+            <a href="https://www.instagram.com/enfocar.camperizacion/" target="_blank" rel="noopener noreferrer" 
+               class="w-13 h-13 p-3.5 rounded-2xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-pink-600/30 active:scale-95 transition-transform"
+               aria-label="Instagram de Enfocar Camperización">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- TikTok Icon Mobile -->
+            <a href="https://www.tiktok.com/@enfocar.camperizacion" target="_blank" rel="noopener noreferrer" 
+               class="w-13 h-13 p-3.5 rounded-2xl bg-neutral-950 border border-cyan-400 text-cyan-400 flex items-center justify-center text-2xl shadow-lg shadow-cyan-400/20 active:scale-95 transition-transform"
+               aria-label="TikTok de Enfocar Camperización">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <!-- YouTube Icon Mobile -->
+            <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" 
+               class="w-13 h-13 p-3.5 rounded-2xl bg-red-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-red-600/30 active:scale-95 transition-transform"
+               aria-label="Canal Oficial de YouTube">
+              <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
 
-          <!-- TikTok Card -->
-          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
-            <div class="flex items-center justify-between">
+          <!-- Desktop Social Cards: FULL DETAIL (hidden on mobile) -->
+          <div class="hidden lg:block space-y-4">
+            
+            <!-- Instagram Card -->
+            <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-xl shadow-md">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">Instagram</h4>
+                    <p class="text-pink-400 text-xs font-semibold">@enfocar.camperizacion</p>
+                  </div>
+                </div>
+                <span class="bg-pink-500/10 text-pink-400 border border-pink-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Reels</span>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Avances diarios, fotos de las terminaciones, encuestas y el detrás de escena de cada vehículo en el taller.
+              </p>
+              <a href="https://www.instagram.com/enfocar.camperizacion/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-pink-500 hover:opacity-90 text-white font-bold text-xs flex items-center justify-center gap-2 transition-opacity">
+                <i class="fa-brands fa-instagram text-sm"></i>
+                <span>Seguir en Instagram</span>
+              </a>
+            </div>
+
+            <!-- TikTok Card -->
+            <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-neutral-900 border border-cyan-500/40 text-cyan-400 flex items-center justify-center text-xl shadow-md">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">TikTok</h4>
+                    <p class="text-cyan-400 text-xs font-semibold">@enfocar.camperizacion</p>
+                  </div>
+                </div>
+                <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Videos cortos</span>
+              </div>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Tips rápidos de camperización, soluciones de espacio y humor rodantero en formato vertical.
+              </p>
+              <a href="https://www.tiktok.com/@enfocar.camperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-neutral-900 border border-cyan-500/40 hover:bg-cyan-950/40 text-cyan-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-tiktok text-sm"></i>
+                <span>Seguir en TikTok</span>
+              </a>
+            </div>
+
+            <!-- Canal Oficial Card -->
+            <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
               <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-xl bg-neutral-900 border border-cyan-500/40 text-cyan-400 flex items-center justify-center text-xl shadow-md">
-                  <i class="fa-brands fa-tiktok"></i>
+                <div class="w-11 h-11 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-xl border border-red-500/30">
+                  <i class="fa-brands fa-youtube"></i>
                 </div>
                 <div>
-                  <h4 class="text-white font-bold text-sm">TikTok</h4>
-                  <p class="text-cyan-400 text-xs font-semibold">@enfocar.camperizacion</p>
+                  <h4 class="text-white font-bold text-sm">Canal Oficial</h4>
+                  <p class="text-slate-400 text-xs">+250 videos y vlogs subidos</p>
                 </div>
               </div>
-              <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-[10px] font-bold px-2 py-0.5 rounded-md">Videos cortos</span>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                Tutoriales técnicos, pruebas de componentes y vlogs completos para aprender cómo construimos cada camper.
+              </p>
+              <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-600/50 hover:bg-red-600/30 text-red-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-brands fa-youtube text-sm"></i>
+                <span>Explorar Canal Completo</span>
+              </a>
             </div>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Tips rápidos de camperización, soluciones de espacio y humor rodantero en formato vertical.
-            </p>
-            <a href="https://www.tiktok.com/@enfocar.camperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-neutral-900 border border-cyan-500/40 hover:bg-cyan-950/40 text-cyan-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
-              <i class="fa-brands fa-tiktok text-sm"></i>
-              <span>Seguir en TikTok</span>
-            </a>
-          </div>
 
-          <!-- Canal Oficial Card -->
-          <div class="bg-brand-surface/90 border border-brand-border rounded-2xl p-5 space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-11 h-11 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-xl border border-red-500/30">
-                <i class="fa-brands fa-youtube"></i>
-              </div>
-              <div>
-                <h4 class="text-white font-bold text-sm">Canal Oficial</h4>
-                <p class="text-slate-400 text-xs">+250 videos y vlogs subidos</p>
-              </div>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Tutoriales técnicos, pruebas de componentes y vlogs completos para aprender cómo construimos cada camper.
-            </p>
-            <a href="https://www.youtube.com/@enfocarcamperizacion" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-red-600/20 border border-red-600/50 hover:bg-red-600/30 text-red-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors">
-              <i class="fa-brands fa-youtube text-sm"></i>
-              <span>Explorar Canal Completo</span>
-            </a>
           </div>
 
         </div>
@@ -1139,9 +1170,9 @@
         const tab = document.getElementById(`videoTab${i}`);
         if (tab) {
           if (i === index) {
-            tab.className = "video-tab text-left p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer";
+            tab.className = "video-tab text-left p-2.5 sm:p-3.5 rounded-xl border-2 border-amber-500 bg-brand-card/90 transition-all cursor-pointer";
           } else {
-            tab.className = "video-tab text-left p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer";
+            tab.className = "video-tab text-left p-2.5 sm:p-3.5 rounded-xl border border-brand-border bg-brand-card hover:border-amber-400/50 transition-all cursor-pointer";
           }
         }
       }
@@ -1158,23 +1189,23 @@
       if (container) {
         container.innerHTML = `
           <img id="videoThumb" src="${v.thumb}" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/${v.id}/hqdefault.jpg';" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-3 sm:p-6">
             <div class="relative z-10">
-              <div class="flex items-center justify-between gap-4">
-                <div>
-                  <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2.5 py-0.5 rounded mb-2">${v.badge}</span>
-                  <h4 id="videoTitleOverlay" class="text-white font-extrabold text-base sm:text-xl leading-snug drop-shadow-md">${v.title}</h4>
-                  <p class="text-slate-300 text-xs mt-1">Hacé clic para reproducir en vivo</p>
+              <div class="flex items-center justify-between gap-2 sm:gap-4">
+                <div class="min-w-0 flex-1">
+                  <span class="inline-block text-[9px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 border border-amber-500/30 px-2 py-0.5 rounded mb-1 sm:mb-2">${v.badge}</span>
+                  <h4 id="videoTitleOverlay" class="text-white font-extrabold text-xs sm:text-base lg:text-xl leading-snug drop-shadow-md line-clamp-2 sm:line-clamp-none">${v.title}</h4>
+                  <p class="text-slate-300 text-[10px] sm:text-xs mt-0.5 sm:mt-1 hidden xs:block">Hacé clic para reproducir en vivo</p>
                 </div>
-                <a id="videoDirectLink" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors">
+                <a id="videoDirectLink" href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-black/90 border border-white/20 text-white text-xs font-semibold transition-colors shrink-0">
                   <span>Ver en YouTube</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
               </div>
             </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
-                <i class="fa-solid fa-play text-xl sm:text-2xl ml-1"></i>
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-12 h-12 sm:w-20 sm:h-20 rounded-full bg-red-600 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl shadow-red-600/50 group-hover:scale-110 transition-all duration-300">
+                <i class="fa-solid fa-play text-base sm:text-2xl ml-0.5 sm:ml-1"></i>
               </div>
             </div>
           </div>
@@ -1248,56 +1279,7 @@
       });
     });
 
-    // Update summary in live UI
-    function updateConfiguratorSummary() {
-      const vehicleEl = document.getElementById('summaryVehicleName');
-      if (vehicleEl) {
-        vehicleEl.textContent = currentVehicleName;
-      }
-
-      const listEl = document.getElementById('summaryAddonsList');
-      if (listEl) {
-        listEl.innerHTML = '';
-        const checkboxes = document.querySelectorAll('.addon-check:checked');
-        if (checkboxes.length === 0) {
-          listEl.innerHTML = '<li class="text-slate-500 italic">Ningún módulo adicional seleccionado</li>';
-        } else {
-          checkboxes.forEach(cb => {
-            const name = cb.getAttribute('data-name');
-            const li = document.createElement('li');
-            li.className = 'flex items-center gap-2';
-            li.innerHTML = '<span class="text-amber-400 font-bold">✓</span> <span>' + name + '</span>';
-            listEl.appendChild(li);
-          });
-        }
-      }
-    }
-
-    // Vehicle cards selection
-    document.querySelectorAll('.vehicle-card').forEach(card => {
-      card.addEventListener('click', function () {
-        document.querySelectorAll('.vehicle-card').forEach(c => {
-          c.classList.remove('border-amber-500', 'border-2');
-          c.classList.add('border-brand-border', 'border');
-          const icon = c.querySelector('i');
-          if (icon) {
-            icon.classList.remove('text-amber-400');
-            icon.classList.add('text-slate-400');
-          }
-        });
-        this.classList.remove('border-brand-border', 'border');
-        this.classList.add('border-amber-500', 'border-2');
-        const activeIcon = this.querySelector('i');
-        if (activeIcon) {
-          activeIcon.classList.remove('text-slate-400');
-          activeIcon.classList.add('text-amber-400');
-        }
-        currentVehicleName = this.getAttribute('data-vehicle');
-        updateConfiguratorSummary();
-      });
-    });
-
-    // Checkboxes change listener
+     // Checkboxes change listener
     document.querySelectorAll('.addon-check').forEach(cb => {
       cb.addEventListener('change', updateConfiguratorSummary);
     });
