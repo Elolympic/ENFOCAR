@@ -776,97 +776,212 @@
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Nuestros Trabajos</h2>
         </div>
         
-        <!-- Filter buttons -->
+        <!-- Filter buttons with Motorhomes & Gran Volumen -->
         <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
           <button onclick="filterGallery('all')" class="gallery-filter px-4 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-black border border-amber-500 transition-all cursor-pointer" data-category="all">Todos</button>
+          <button onclick="filterGallery('motorhomes')" class="gallery-filter px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition-all cursor-pointer" data-category="motorhomes">Motorhomes</button>
           <button onclick="filterGallery('gran-volumen')" class="gallery-filter px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition-all cursor-pointer" data-category="gran-volumen">Gran Volumen</button>
-          <button onclick="filterGallery('medianas')" class="gallery-filter px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition-all cursor-pointer" data-category="medianas">Furgón Mediano</button>
-          <button onclick="filterGallery('detalles')" class="gallery-filter px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-card text-slate-300 border border-brand-border hover:border-amber-400/50 transition-all cursor-pointer" data-category="detalles">Terminaciones</button>
         </div>
       </div>
 
       <!-- Gallery Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
-        <!-- Item 1 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="gran-volumen">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?q=80&w=800&auto=format&fit=crop" alt="Camperización Gran Volumen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Gran Volumen</span>
-                <h4 class="text-white font-bold text-base">Sprinter L2H2 Integral</h4>
+        
+        <!-- Mercedes-Benz O400 Motorhome Project Card -->
+        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:border-amber-500 transition-all duration-300" 
+             data-type="motorhomes"
+             onclick="openProjectModal('o400')">
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img src="https://i.ibb.co/vv4rN8tV/vlcsnap-2026-09-09-12h29m35s822.png" 
+                 alt="Mercedes Benz O400 Motorhome Colectivo Completo Enfocar Camperización" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+              <div class="w-full flex items-end justify-between">
+                <div>
+                  <span class="inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 mb-1">
+                    Motorhome Colectivo
+                  </span>
+                  <h4 class="text-white font-bold text-lg leading-tight">Mercedes-Benz O400</h4>
+                  <p class="text-slate-300 text-xs mt-0.5">Transformación integral de gran porte</p>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-amber-500 text-neutral-950 flex items-center justify-center text-sm font-bold shadow-md shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-images"></i>
+                </div>
               </div>
+            </div>
+            <div class="absolute top-3 right-3 bg-black/75 border border-white/20 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-image text-amber-400"></i>
+              <span>13 fotos</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="medianas">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1517824806704-9040b037703b?q=80&w=800&auto=format&fit=crop" alt="Furgón Mediano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Furgón Mediano</span>
-                <h4 class="text-white font-bold text-base">Renault Trafic Equipamiento</h4>
+        <!-- Mercedes-Benz O500 Motorhome Project Card -->
+        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:border-amber-500 transition-all duration-300" 
+             data-type="motorhomes"
+             onclick="openProjectModal('o500')">
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img src="https://i.ibb.co/gbRtHbKv/vlcsnap-2026-09-09-12h19m13s933.png" 
+                 alt="Mercedes Benz O500 Motorhome Colectivo Completo Enfocar Camperización" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+              <div class="w-full flex items-end justify-between">
+                <div>
+                  <span class="inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 mb-1">
+                    Motorhome Colectivo
+                  </span>
+                  <h4 class="text-white font-bold text-lg leading-tight">Mercedes-Benz O500</h4>
+                  <p class="text-slate-300 text-xs mt-0.5">Armado y equipamiento premium</p>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-amber-500 text-neutral-950 flex items-center justify-center text-sm font-bold shadow-md shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-images"></i>
+                </div>
               </div>
+            </div>
+            <div class="absolute top-3 right-3 bg-black/75 border border-white/20 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-image text-amber-400"></i>
+              <span>3 fotos</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="detalles">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" alt="Cocina y Muebles Camper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Terminaciones</span>
-                <h4 class="text-white font-bold text-base">Cocina Artesanal en Madera</h4>
+        <!-- Metalpar 1418 Motorhome Project Card -->
+        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:border-amber-500 transition-all duration-300" 
+             data-type="motorhomes"
+             onclick="openProjectModal('metalpar1418')">
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img src="https://i.ibb.co/mFPsKKb7/vlcsnap-2026-09-09-12h22m52s719.png" 
+                 alt="Metalpar 1418 Motorhome Colectivo Completo Enfocar Camperización" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+              <div class="w-full flex items-end justify-between">
+                <div>
+                  <span class="inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 mb-1">
+                    Motorhome Colectivo
+                  </span>
+                  <h4 class="text-white font-bold text-lg leading-tight">Metalpar 1418</h4>
+                  <p class="text-slate-300 text-xs mt-0.5">Adaptación y camperización a medida</p>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-amber-500 text-neutral-950 flex items-center justify-center text-sm font-bold shadow-md shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-images"></i>
+                </div>
               </div>
+            </div>
+            <div class="absolute top-3 right-3 bg-black/75 border border-white/20 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-image text-amber-400"></i>
+              <span>5 fotos</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 4 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="gran-volumen">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" alt="Motorhome en ruta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Gran Volumen</span>
-                <h4 class="text-white font-bold text-base">Peugeot Boxer 4 Plazas</h4>
+        <!-- Mercedes-Benz Sprinter 413 Project Card (Gran Volumen) -->
+        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:border-amber-500 transition-all duration-300" 
+             data-type="gran-volumen"
+             onclick="openProjectModal('sprinter413')">
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img src="https://i.ibb.co/cS1kPbkV/vlcsnap-2026-09-09-12h12m12s807.png" 
+                 alt="Mercedes-Benz Sprinter 413 Camperizada Furgón Completo Enfocar Camperización" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+              <div class="w-full flex items-end justify-between">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 mb-1">
+                    <i class="fa-solid fa-truck text-[10px]"></i> Gran Volumen
+                  </span>
+                  <h4 class="text-white font-bold text-lg leading-tight">Mercedes-Benz Sprinter 413</h4>
+                  <p class="text-slate-300 text-xs mt-0.5">Camperización integral de alto rendimiento</p>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-amber-500 text-neutral-950 flex items-center justify-center text-sm font-bold shadow-md shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-images"></i>
+                </div>
               </div>
+            </div>
+            <div class="absolute top-3 right-3 bg-black/75 border border-white/20 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-image text-amber-400"></i>
+              <span>9 fotos</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 5 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="detalles">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop" alt="Tablero y electricidad camper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Terminaciones</span>
-                <h4 class="text-white font-bold text-base">Instalación Eléctrica 12V/220V</h4>
+        <!-- Mercedes-Benz Sprinter 415 Project Card (Gran Volumen) -->
+        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:border-amber-500 transition-all duration-300" 
+             data-type="gran-volumen"
+             onclick="openProjectModal('sprinter415')">
+          <div class="relative h-64 overflow-hidden bg-black">
+            <img src="https://i.ibb.co/zH2RdcwT/vlcsnap-2026-09-09-12h30m27s914.png" 
+                 alt="Mercedes-Benz Sprinter 415 Camperizada Furgón Completo Enfocar Camperización" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-5">
+              <div class="w-full flex items-end justify-between">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30 mb-1">
+                    <i class="fa-solid fa-truck text-[10px]"></i> Gran Volumen
+                  </span>
+                  <h4 class="text-white font-bold text-lg leading-tight">Mercedes-Benz Sprinter 415</h4>
+                  <p class="text-slate-300 text-xs mt-0.5">Equipamiento integral y terminaciones de lujo</p>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-amber-500 text-neutral-950 flex items-center justify-center text-sm font-bold shadow-md shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-images"></i>
+                </div>
               </div>
+            </div>
+            <div class="absolute top-3 right-3 bg-black/75 border border-white/20 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <i class="fa-regular fa-image text-amber-400"></i>
+              <span>8 fotos</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 6 -->
-        <div class="gallery-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden group" data-type="medianas">
-          <div class="relative h-64 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop" alt="Cama camper utilitario" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-5">
-              <div>
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Furgón Mediano</span>
-                <h4 class="text-white font-bold text-base">Módulo Cama & Almacenaje</h4>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
+
+  <!-- Interactive Project Modal (Lightbox Gallery) -->
+  <div id="projectModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-3 sm:p-6 transition-all">
+    <div class="relative w-full max-w-5xl bg-brand-surface border border-brand-border rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[95vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 border-b border-brand-border flex items-center justify-between bg-brand-dark/80">
+        <div>
+          <span id="modalCategoryBadge" class="text-xs font-bold uppercase tracking-widest text-amber-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-truck text-xs"></i>
+            <span>Gran Volumen</span>
+          </span>
+          <h3 id="modalProjectTitle" class="text-lg sm:text-2xl font-black text-white">Mercedes-Benz Sprinter 415</h3>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="modalCounter" class="text-xs font-semibold text-slate-400 bg-brand-card px-3 py-1 rounded-full border border-brand-border">
+            1 / 8
+          </span>
+          <button onclick="closeProjectModal()" class="w-9 h-9 rounded-full bg-brand-card hover:bg-red-500/20 text-slate-300 hover:text-red-400 border border-brand-border flex items-center justify-center transition-colors cursor-pointer" aria-label="Cerrar ventana">
+            <i class="fa-solid fa-xmark text-base"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Stage Photo -->
+      <div class="relative flex-1 bg-black flex items-center justify-center overflow-hidden min-h-[280px] sm:min-h-[460px]">
+        <img id="modalMainImg" src="" alt="Foto proyecto" class="max-h-[60vh] sm:max-h-[65vh] w-auto max-w-full object-contain transition-all duration-300">
+        
+        <!-- Prev Button -->
+        <button onclick="changeModalPhoto(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-neutral-950/80 hover:bg-amber-500 hover:text-neutral-950 text-white border border-white/20 flex items-center justify-center transition-all cursor-pointer shadow-xl" aria-label="Foto anterior">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+
+        <!-- Next Button -->
+        <button onclick="changeModalPhoto(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-neutral-950/80 hover:bg-amber-500 hover:text-neutral-950 text-white border border-white/20 flex items-center justify-center transition-all cursor-pointer shadow-xl" aria-label="Foto siguiente">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnail Carousel Strip -->
+      <div class="p-3 sm:p-4 bg-brand-dark/95 border-t border-brand-border overflow-x-auto custom-scrollbar">
+        <div class="flex items-center gap-2" id="modalThumbsContainer">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Testimonials Section with Real Google Maps Reviews -->
   <section id="opiniones" class="py-20 bg-brand-dark border-t border-brand-border">
@@ -1308,6 +1423,188 @@
           });
         }
       }
+    }
+
+        // Projects Gallery Data
+    const projectsData = {
+      'o400': {
+        title: "Mercedes-Benz O400 | Motorhome Colectivo",
+        category: "Motorhome Colectivo",
+        icon: "fa-bus",
+        images: [
+          "https://i.ibb.co/vv4rN8tV/vlcsnap-2026-09-09-12h29m35s822.png",
+          "https://i.ibb.co/7JJvrNf7/vlcsnap-2026-09-09-12h27m31s181.png",
+          "https://i.ibb.co/HfsCqZXZ/vlcsnap-2026-09-09-12h27m37s764.png",
+          "https://i.ibb.co/mC4KcwDQ/vlcsnap-2026-09-09-12h27m43s911.png",
+          "https://i.ibb.co/KxyY9pfM/vlcsnap-2026-09-09-12h27m54s363.png",
+          "https://i.ibb.co/205Mjzrx/vlcsnap-2026-09-09-12h28m00s547.png",
+          "https://i.ibb.co/FbY5jqcj/vlcsnap-2026-09-09-12h28m09s155.png",
+          "https://i.ibb.co/SD5hWFr1/vlcsnap-2026-09-09-12h28m17s563.png",
+          "https://i.ibb.co/vCWrMX41/vlcsnap-2026-09-09-12h28m25s560.png",
+          "https://i.ibb.co/Zz0KMWn9/vlcsnap-2026-09-09-12h28m33s341.png",
+          "https://i.ibb.co/99Qcqrkd/vlcsnap-2026-09-09-12h28m53s763.png",
+          "https://i.ibb.co/Ld4Ly2cJ/vlcsnap-2026-09-09-12h29m05s276.png",
+          "https://i.ibb.co/wN5j0YTn/vlcsnap-2026-09-09-12h29m15s263.png"
+        ]
+      },
+      'o500': {
+        title: "Mercedes-Benz O500 | Motorhome Colectivo",
+        category: "Motorhome Colectivo",
+        icon: "fa-bus",
+        images: [
+          "https://i.ibb.co/gbRtHbKv/vlcsnap-2026-09-09-12h19m13s933.png",
+          "https://i.ibb.co/7tF9ftbH/vlcsnap-2026-09-09-12h17m54s765.png",
+          "https://i.ibb.co/zV9MHrjt/vlcsnap-2026-09-09-12h18m30s579.png"
+        ]
+      },
+      'metalpar1418': {
+        title: "Metalpar 1418 | Motorhome Colectivo",
+        category: "Motorhome Colectivo",
+        icon: "fa-bus",
+        images: [
+          "https://i.ibb.co/mFPsKKb7/vlcsnap-2026-09-09-12h22m52s719.png",
+          "https://i.ibb.co/TqxqQhpv/vlcsnap-2026-09-09-12h22m58s236.png",
+          "https://i.ibb.co/M53h08Sv/vlcsnap-2026-09-09-12h23m07s871.png",
+          "https://i.ibb.co/mVFXhhr5/vlcsnap-2026-09-09-12h23m35s540.png",
+          "https://i.ibb.co/TBnvcstL/vlcsnap-2026-09-09-12h24m57s929.png"
+        ]
+      },
+      'sprinter413': {
+        title: "Mercedes-Benz Sprinter 413 | Gran Volumen",
+        category: "Gran Volumen Camper",
+        icon: "fa-truck",
+        images: [
+          "https://i.ibb.co/cS1kPbkV/vlcsnap-2026-09-09-12h12m12s807.png",
+          "https://i.ibb.co/xqj869fd/vlcsnap-2026-09-09-12h12m38s474.png",
+          "https://i.ibb.co/Z6znJLJn/vlcsnap-2026-09-09-12h12m58s406.png",
+          "https://i.ibb.co/0pB9GNBJ/vlcsnap-2026-09-09-12h13m20s363.png",
+          "https://i.ibb.co/y1TksWv/vlcsnap-2026-09-09-12h14m47s830.png",
+          "https://i.ibb.co/7tDHYTy4/vlcsnap-2026-09-09-12h14m59s423.png",
+          "https://i.ibb.co/Wm32T3w/vlcsnap-2026-09-09-12h15m05s350.png",
+          "https://i.ibb.co/LzxhHhys/vlcsnap-2026-09-09-12h15m13s125.png",
+          "https://i.ibb.co/nqLNw9DS/vlcsnap-2026-09-09-12h15m30s633.png"
+        ]
+      },
+      'sprinter415': {
+        title: "Mercedes-Benz Sprinter 415 | Gran Volumen",
+        category: "Gran Volumen Camper",
+        icon: "fa-truck",
+        images: [
+          "https://i.ibb.co/zH2RdcwT/vlcsnap-2026-09-09-12h30m27s914.png",
+          "https://i.ibb.co/jPRWcv5G/vlcsnap-2026-09-09-12h30m34s201.png",
+          "https://i.ibb.co/v6nW6m39/vlcsnap-2026-09-09-12h30m42s954.png",
+          "https://i.ibb.co/Y4nfZYks/vlcsnap-2026-09-09-12h30m57s993.png",
+          "https://i.ibb.co/LzqnrMgt/vlcsnap-2026-09-09-12h31m03s715.png",
+          "https://i.ibb.co/7c9H2qt/vlcsnap-2026-09-09-12h31m08s804.png",
+          "https://i.ibb.co/TMKbWbvM/vlcsnap-2026-09-09-12h31m41s132.png",
+          "https://i.ibb.co/yBShWWPB/vlcsnap-2026-09-09-12h32m17s807.png"
+        ]
+      }
+    };
+
+    let activeProjectKey = null;
+    let currentPhotoIdx = 0;
+
+    function openProjectModal(key) {
+      const project = projectsData[key];
+      if (!project) return;
+      activeProjectKey = key;
+      currentPhotoIdx = 0;
+
+      document.getElementById('modalProjectTitle').textContent = project.title;
+      
+      const badgeEl = document.getElementById('modalCategoryBadge');
+      if (badgeEl) {
+        badgeEl.innerHTML = `<i class="fa-solid ${project.icon || 'fa-truck'} text-xs"></i> <span>${project.category || 'Proyecto'}</span>`;
+      }
+
+      renderModalPhoto();
+
+      // Render thumbs
+      const thumbsContainer = document.getElementById('modalThumbsContainer');
+      thumbsContainer.innerHTML = '';
+      project.images.forEach((imgUrl, i) => {
+        const thumb = document.createElement('button');
+        thumb.className = `w-16 h-12 rounded-lg overflow-hidden border-2 shrink-0 transition-all cursor-pointer ${i === 0 ? 'border-amber-500 scale-105' : 'border-neutral-700 opacity-60 hover:opacity-100'}`;
+        thumb.id = `thumbBtn-${i}`;
+        thumb.onclick = () => {
+          currentPhotoIdx = i;
+          renderModalPhoto();
+        };
+        thumb.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover" alt="miniatura ${i+1}">`;
+        thumbsContainer.appendChild(thumb);
+      });
+
+      const modal = document.getElementById('projectModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function changeModalPhoto(step) {
+      if (!activeProjectKey) return;
+      const images = projectsData[activeProjectKey].images;
+      currentPhotoIdx = (currentPhotoIdx + step + images.length) % images.length;
+      renderModalPhoto();
+    }
+
+    function renderModalPhoto() {
+      if (!activeProjectKey) return;
+      const images = projectsData[activeProjectKey].images;
+      const mainImg = document.getElementById('modalMainImg');
+      mainImg.src = images[currentPhotoIdx];
+      document.getElementById('modalCounter').textContent = `${currentPhotoIdx + 1} / ${images.length}`;
+
+      // Update active thumb
+      images.forEach((_, i) => {
+        const btn = document.getElementById(`thumbBtn-${i}`);
+        if (btn) {
+          if (i === currentPhotoIdx) {
+            btn.className = 'w-16 h-12 rounded-lg overflow-hidden border-2 shrink-0 transition-all cursor-pointer border-amber-500 scale-105 opacity-100 shadow-md shadow-amber-500/20';
+            btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          } else {
+            btn.className = 'w-16 h-12 rounded-lg overflow-hidden border-2 shrink-0 transition-all cursor-pointer border-neutral-700 opacity-50 hover:opacity-100';
+          }
+        }
+      });
+    }
+
+    // Keyboard support for modal
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('projectModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeProjectModal();
+        if (e.key === 'ArrowRight') changeModalPhoto(1);
+        if (e.key === 'ArrowLeft') changeModalPhoto(-1);
+      }
+    });
+
+    // Gallery Filter
+    function filterGallery(category) {
+      document.querySelectorAll('.gallery-filter').forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-amber-500', 'text-black', 'border-amber-500');
+          btn.classList.remove('bg-brand-card', 'text-slate-300', 'border-brand-border');
+        } else {
+          btn.classList.remove('bg-amber-500', 'text-black', 'border-amber-500');
+          btn.classList.add('bg-brand-card', 'text-slate-300', 'border-brand-border');
+        }
+      });
+
+      document.querySelectorAll('.gallery-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-type') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     }
 
     // Vehicle cards selection
